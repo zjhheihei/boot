@@ -1,0 +1,30 @@
+storage
+      |
+	  |-- boot 
+	  |
+	  |-- user.app  
+	  |         |
+	  |         |-- execution   partition
+	  |         ‘-- information partition
+	  |                      |
+	  |                      |-- upgrade flag(anticode)
+	  |                      |-- checksum(anticode)
+	  |                      |-- execution code size(anticode)
+	  |                      |-- upgrade flag
+	  |                      |-- checksum
+	  |                      ‘-- execution code size
+	  |
+      |-- user.upgrade	  
+	  |         |
+	  |         |-- execution   partition
+	  |         ‘-- information partition
+	  |                      |
+	  |                      |-- upgrade flag(anticode)
+	  |                      |-- checksum(anticode)
+	  |                      |-- execution code size(anticode)
+	  |                      |-- upgrade flag
+	  |                      |-- checksum
+	  |                      ‘-- execution code size
+	  |
+      ‘-- reserve
+ 
