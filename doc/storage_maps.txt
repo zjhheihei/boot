@@ -6,7 +6,7 @@ storage
 	  |-- user.app  
 	  |         |
 	  |         |-- execution   partition
-	  |         ‘-- information partition(32byts is valid in end)
+	  |         ‘-- information partition(32byts is valid in end，4x8W)
 	  |                      |
 	  |                      |-- serial number(anticode)
 	  |                      |-- upgrade flag(anticode)
@@ -34,4 +34,47 @@ storage
 	  |                      ‘-- execution code size
 	  |
       ‘-- reserve
- 
+//-----------------------------------------------------------------------------------
+//checksum C code
+//----------------------------------------------------------------------------------
+#define CheckSumWordEven          0x39ea2e76
+#define CheckSumWordOdd           0x82b453c3
+
+static INT32U MakeOneCheckText(INT32U Data,INT32U Count)
+{
+    if(Count&0x00000001)
+    {
+        Data=Data^CheckSumWordOdd;
+    }
+    else
+    {
+        Data=Data^CheckSumWordEven;
+    }
+    return(Data);
+}
+
+INT32U MakeCheckSumText(INT8U* pData,INT32U Length_Bytes)
+{
+    INT32U iWords,This_ids;
+    INT32U Index;
+    INT32U MakeSum,ReadData;
+    iWords = (Length_Bytes)/4;
+    This_ids = 0;
+    MakeSum = 0;
+    Index = 0;
+    while(iWords)
+    {
+        ReadData = (INT32U)pData[Index]&0x000000ff;
+        ReadData = ReadData<<8;
+        ReadData = ReadData|((INT32U)pData[Index+1]&0x000000ff);
+        ReadData = ReadData<<8;
+        ReadData = ReadData|((INT32U)pData[Index+2]&0x000000ff);
+        ReadData = ReadData<<8;
+        ReadData = ReadData|((INT32U)pData[Index+3]&0x000000ff);
+        MakeSum+=MakeOneCheckText(ReadData,This_ids);
+        Index = Index+4;
+        iWords--;
+        This_ids++;
+    }
+    return(MakeSum);
+}

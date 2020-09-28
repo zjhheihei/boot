@@ -6,10 +6,10 @@
 //0x0800 0000 -- 0x0803 FFFF
 //boot
 //0x0800 0000 -- 0x0800 1FFF     8k      4  page
-//user.app ÔËĞĞÇø
+//user.app è¿è¡ŒåŒº
 //0x0800 2000 -- 0x0801 CFFF     108k    54  page  0-57page
-//user.upgrade Éı¼¶Çø
-//0x0801 D000 -- 0x0803 7FFF     108k    54  page  58,59,60,61,62-127page ÓÉWRP3 bit7Ğ´±£»¤
+//user.upgrade å‡çº§åŒº
+//0x0801 D000 -- 0x0803 7FFF     108k    54  page  58,59,60,61,62-127page ç”±WRP3 bit7å†™ä¿æŠ¤
 //reserve                    
 //0x0803 8000 -- 0x0803 FFFF     32k     16  page 
 //+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -21,7 +21,7 @@
 //+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 typedef void (*pFunction)(void);
 //+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-//³ÌĞòÌø×ªµ½Ó¦ÓÃÇø
+//ç¨‹åºè·³è½¬åˆ°åº”ç”¨åŒº
 //-----------------------------------------------------------------------------
 void bsp_jump_to_user_app(void)
 {
@@ -38,7 +38,7 @@ void bsp_jump_to_user_app(void)
     Jump_To_Application(); 
 }
 //+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-//32byteµÄĞÅÏ¢Êı¾İ
+//32byteçš„ä¿¡æ¯æ•°æ®
 //-----------------------------------------------------------------------------
 void bsp_read_information_user_app(sdt_int8u* out_pInf)
 {
@@ -66,7 +66,7 @@ void bsp_read_information_user_upgrade(sdt_int8u* out_pInf)
     }
 }
 //+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-//¶ÁÈ¡flashµÄÊı¾İÁ÷
+//è¯»å–flashçš„æ•°æ®æµ
 //-----------------------------------------------------------------------------
 void bsp_read_4bytes_user_app(sdt_int32u in_offset_addr,sdt_int8u* out_pData)
 {
@@ -74,10 +74,10 @@ void bsp_read_4bytes_user_app(sdt_int32u in_offset_addr,sdt_int8u* out_pData)
     sdt_int8u i;
     
     #ifdef NDEBUG
-    IWDG_ReloadCounter();  //´óÊı¾İ´«Êä£¬±ÜÃâwatchdog timeout
+    IWDG_ReloadCounter();  //å¤§æ•°æ®ä¼ è¾“ï¼Œé¿å…watchdog timeout
     #endif
     
-    if((user_app_start_addr + in_offset_addr) > user_app_inf_addr)//µØÖ·±£»¤
+    if((user_app_start_addr + in_offset_addr) > user_app_inf_addr)//åœ°å€ä¿æŠ¤
     {
         return;
     }
@@ -97,10 +97,10 @@ void bsp_read_4bytes_user_upgrade(sdt_int32u in_offset_addr,sdt_int8u* out_pData
     sdt_int8u i;
     
     #ifdef NDEBUG
-    IWDG_ReloadCounter();  //´óÊı¾İ´«Êä£¬±ÜÃâwatchdog timeout
+    IWDG_ReloadCounter();  //å¤§æ•°æ®ä¼ è¾“ï¼Œé¿å…watchdog timeout
     #endif
     
-    if((user_upgrade_start_addr + in_offset_addr) > user_upgrade_inf_addr)//µØÖ·±£»¤
+    if((user_upgrade_start_addr + in_offset_addr) > user_upgrade_inf_addr)//åœ°å€ä¿æŠ¤
     {
         return;
     }
@@ -122,7 +122,7 @@ void bsp_transfer_user_upgrade_to_app(sdt_int32u in_codesize)
     IWDG_ReloadCounter(); //
     #endif
     
-    if((user_app_start_addr + in_codesize) > user_app_inf_addr)//µØÖ·±£»¤
+    if((user_app_start_addr + in_codesize) > user_app_inf_addr)//åœ°å€ä¿æŠ¤
     {
         return;
     }

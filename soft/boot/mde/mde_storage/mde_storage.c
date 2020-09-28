@@ -13,12 +13,12 @@
 //	  |                      |              | 
 //	  |                      |              |-- 0x519AE493--complete  0x8D731A75--updating
 //	  |                      |-- checksum
-//	  |                      ¡®-- execution code size
+//	  |                      â€˜-- execution code size
 //+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 #define upgrade_complete   0x519AE493
 #define upgrade_updating   0x8D731A75
 //+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-//·´ÂëĞ£Ñé´¦Àí
+//åç æ ¡éªŒå¤„ç†
 //-----------------------------------------------------------------------------
 static sdt_bool check_notcode_is_ok(sdt_int8u* in_pData,sdt_int8u size)
 {
@@ -56,7 +56,7 @@ static sdt_int32u MakeOneCheckText(sdt_int32u Data,sdt_int32u Count)
     return(Data);
 }
 //+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-//Éı¼¶ÇøÊı¾İĞ£Ñé
+//å‡çº§åŒºæ•°æ®æ ¡éªŒ
 //-----------------------------------------------------------------------------
 static sdt_bool upgrade_checksum_is_ok(sdt_int32u checksum,sdt_int32u codesize)
 {
@@ -65,7 +65,7 @@ static sdt_bool upgrade_checksum_is_ok(sdt_int32u checksum,sdt_int32u codesize)
     sdt_int32u make_checksum = 0;
     sdt_int32u rd_data;
     
-    codesize = codesize/4;  //ÕÛËã³É32bitsµÄ´óĞ¡
+    codesize = codesize/4;  //æŠ˜ç®—æˆ32bitsçš„å¤§å°
     while(codesize)
     {
         bsp_read_4bytes_user_upgrade(offset_addr,&rd_buff[0]);
@@ -81,7 +81,7 @@ static sdt_bool upgrade_checksum_is_ok(sdt_int32u checksum,sdt_int32u codesize)
     return(sdt_false);
 }
 //+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-//ÔËĞĞÇøÊı¾İĞ£Ñé
+//è¿è¡ŒåŒºæ•°æ®æ ¡éªŒ
 //-----------------------------------------------------------------------------
 static sdt_bool app_checksum_is_ok(sdt_int32u checksum,sdt_int32u codesize)
 {
@@ -90,7 +90,7 @@ static sdt_bool app_checksum_is_ok(sdt_int32u checksum,sdt_int32u codesize)
     sdt_int32u make_checksum = 0;
     sdt_int32u rd_data;
     
-    codesize = codesize/4;  //ÕÛËã³É32bitsµÄ´óĞ¡
+    codesize = codesize/4;  //æŠ˜ç®—æˆ32bitsçš„å¤§å°
     while(codesize)
     {
         bsp_read_4bytes_user_app(offset_addr,&rd_buff[0]);
@@ -118,10 +118,10 @@ void mde_need_upgrade(void)
         sdt_int32u update_checksum;
         sdt_int32u update_codesize;
         
-        update_srm = pbc_arrayToInt32u_bigEndian(&rd_inf[16]);        //ĞòºÅ,Éı¼¶ÇøÃ¿Éı¼¶Ò»´Î£¬ĞòºÅ¼Ó1
-        update_flag = pbc_arrayToInt32u_bigEndian(&rd_inf[16+4]);     //±ê¼Ç
-        update_checksum = pbc_arrayToInt32u_bigEndian(&rd_inf[16+8]); //Ğ£ÑéÎÄ
-        update_codesize = pbc_arrayToInt32u_bigEndian(&rd_inf[16+12]);//´úÂë×Ö½ÚÊı
+        update_srm = pbc_arrayToInt32u_bigEndian(&rd_inf[16]);        //åºå·,å‡çº§åŒºæ¯å‡çº§ä¸€æ¬¡ï¼Œåºå·åŠ 1
+        update_flag = pbc_arrayToInt32u_bigEndian(&rd_inf[16+4]);     //æ ‡è®°
+        update_checksum = pbc_arrayToInt32u_bigEndian(&rd_inf[16+8]); //æ ¡éªŒæ–‡
+        update_codesize = pbc_arrayToInt32u_bigEndian(&rd_inf[16+12]);//ä»£ç å­—èŠ‚æ•°
         
         if(upgrade_complete == update_flag)
         {

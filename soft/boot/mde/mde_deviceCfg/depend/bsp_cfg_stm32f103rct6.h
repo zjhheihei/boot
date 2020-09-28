@@ -11,29 +11,29 @@ void bsp_sysclock_cfg(void)
         IWDG_ReloadCounter();
         __no_operation();  
     }
-    RCC_DeInit();                        //ϵͳʱ�Ӹ�λ
-    RCC_HSEConfig(RCC_HSE_ON);           //�򿪾�������
+    RCC_DeInit();                        //系统时钟复位
+    RCC_HSEConfig(RCC_HSE_ON);           //打开晶体振荡器
     if(ERROR==RCC_WaitForHSEStartUp())
     {
-        while(1);                           //�������,�ȴ���λ
+        while(1);                           //晶体出错,等待复位
     }
         
-    FLASH->ACR |= FLASH_ACR_PRFTBE;                          //����ָ��Ԥȡ����/* Enable Prefetch Buffer */
-    FLASH->ACR &= (uint32_t)((uint32_t)~FLASH_ACR_LATENCY);  //ָ��ȴ�2���� /* Flash 2 wait state */
+    FLASH->ACR |= FLASH_ACR_PRFTBE;                          //开启指令预取功能/* Enable Prefetch Buffer */
+    FLASH->ACR &= (uint32_t)((uint32_t)~FLASH_ACR_LATENCY);  //指令等待2周期 /* Flash 2 wait state */
     FLASH->ACR |= (uint32_t)FLASH_ACR_LATENCY_2;    
     
-    RCC_PLLConfig(RCC_PLLSource_HSE_Div1,RCC_PLLMul_6);  //PLL����
-    RCC_PLLCmd(ENABLE);                                 //��PLL
-    while((RCC->CR & RCC_CR_PLLRDY) == 0)               //�ȴ�PLL�ȶ�
+    RCC_PLLConfig(RCC_PLLSource_HSE_Div1,RCC_PLLMul_6);  //PLL配置
+    RCC_PLLCmd(ENABLE);                                 //打开PLL
+    while((RCC->CR & RCC_CR_PLLRDY) == 0)               //等待PLL稳定
     {
     }
-    RCC_SYSCLKConfig(RCC_SYSCLKSource_PLLCLK);          //�л���PLLʱ��
+    RCC_SYSCLKConfig(RCC_SYSCLKSource_PLLCLK);          //切换到PLL时钟
     while ((RCC->CFGR & (uint32_t)RCC_CFGR_SWS) != (uint32_t)0x08)
     {
-    }                                           //�ȴ�PLL��Ϊϵͳʱ��Դ
-    RCC_HCLKConfig(RCC_SYSCLK_Div1);            //AHBʱ��,
-    RCC_PCLK1Config(RCC_HCLK_Div2);             //APB1ʱ��,AHBʱ��2��Ƶ
-    RCC_PCLK2Config(RCC_HCLK_Div1);             //APB2ʱ��,
+    }                                           //等待PLL成为系统时钟源
+    RCC_HCLKConfig(RCC_SYSCLK_Div1);            //AHB时钟,
+    RCC_PCLK1Config(RCC_HCLK_Div2);             //APB1时钟,AHB时钟2分频
+    RCC_PCLK2Config(RCC_HCLK_Div1);             //APB2时钟,
 }
 //+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 #define LsiFreq   40000

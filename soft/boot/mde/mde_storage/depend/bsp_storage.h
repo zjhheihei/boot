@@ -8,11 +8,11 @@
 //+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 void bsp_transfer_user_upgrade_to_app(sdt_int32u in_codesize);
 //-----------------------------------------------------------------------------
-//读取4个字节的数据
+//璇诲彇4涓瓧鑺傜殑鏁版嵁
 void bsp_read_4bytes_user_app(sdt_int32u in_offset_addr,sdt_int8u* out_pData);
 void bsp_read_4bytes_user_upgrade(sdt_int32u in_offset_addr,sdt_int8u* out_pData);
 //-----------------------------------------------------------------------------
-//读取升级信息32bits
+//璇诲彇鍗囩骇淇℃伅32bits
 void bsp_read_information_user_app(sdt_int8u* out_pInf);
 void bsp_read_information_user_upgrade(sdt_int8u* out_pInf);
 //-----------------------------------------------------------------------------
