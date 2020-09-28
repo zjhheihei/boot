@@ -1,3 +1,4 @@
+Byte Endiannessn(Byte Order): Big-Endian
 storage
       |
 	  |-- boot 
@@ -5,11 +6,13 @@ storage
 	  |-- user.app  
 	  |         |
 	  |         |-- execution   partition
-	  |         ‘-- information partition
+	  |         ‘-- information partition(32byts is valid in end)
 	  |                      |
+	  |                      |-- serial number(anticode)
 	  |                      |-- upgrade flag(anticode)
 	  |                      |-- checksum(anticode)
 	  |                      |-- execution code size(anticode)
+	  |                      |-- serial number
 	  |                      |-- upgrade flag
 	  |                      |-- checksum
 	  |                      ‘-- execution code size
@@ -19,10 +22,14 @@ storage
 	  |         |-- execution   partition
 	  |         ‘-- information partition
 	  |                      |
+	  |                      |-- serial number(anticode)
 	  |                      |-- upgrade flag(anticode)
 	  |                      |-- checksum(anticode)
 	  |                      |-- execution code size(anticode)
+	  |                      |-- serial number
 	  |                      |-- upgrade flag
+	  |                      |              | 
+	  |                      |              |-- 0x519AE493--complete  0x8D731A75--updating
 	  |                      |-- checksum
 	  |                      ‘-- execution code size
 	  |

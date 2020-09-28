@@ -1,0 +1,11 @@
+.\
+ |--app
+ |    |--main
+ |    
+ |--mde
+ |    |--mde_deviceCfg
+ |    |           |--bsp_deviceCfg
+ |    |--mde_storage
+ |                |--bsp_flashMemory
+ |--pbc
+ |
