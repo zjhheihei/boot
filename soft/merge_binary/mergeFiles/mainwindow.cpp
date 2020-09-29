@@ -140,8 +140,8 @@ void MainWindow::on_pushButton_CreatMerge_clicked()
     }
     else if(rd_mcu_type.contains("STM8L052R8T6",Qt::CaseInsensitive))
     {
-        boot_max_sizeofbyte = 1024*8;
-        app_max_sizeofbyte = 1024*108;
+        boot_max_sizeofbyte = 1024*2;
+        app_max_sizeofbyte = 1024*30;
         flash_addr_str = 0x00008000;
         flash_resver_data = 0x00;//保留数据为0x00
     }
