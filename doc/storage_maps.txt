@@ -2,6 +2,8 @@ Byte Endiannessn(Byte Order): Big-Endian
 storage
       |
 	  |-- boot 
+	  |      |
+	  |      |--version flag 0x8d350001(32bits,in the end)
 	  |
 	  |-- user.app  
 	  |         |

@@ -70,7 +70,7 @@ bool mergeBinaryData::mergeBinary_createMerge(binaryTransfer_def in_binaryOrigin
     unsigned int appBinaryLength;
     appBinaryLength = read_binaryOrigin.in_appArea_length + (128-(read_binaryOrigin.in_appArea_length)%128); //aligning to 128byts
 
-    if((read_binaryOrigin.in_bootArea_length > read_binaryOrigin.boot_max_size_byte) || (read_binaryOrigin.in_appArea_length > read_binaryOrigin.app_max_size_byte))
+    if((read_binaryOrigin.in_bootArea_length > (read_binaryOrigin.boot_max_size_byte-4)) || (read_binaryOrigin.in_appArea_length > (read_binaryOrigin.app_max_size_byte -32)))
     {
         mergeRight = false;
     }
@@ -104,6 +104,10 @@ bool mergeBinaryData::mergeBinary_createMerge(binaryTransfer_def in_binaryOrigin
                 pAppArray[i] = in_resver_detlais;
             }
         }
+        pBootArray[read_binaryOrigin.boot_max_size_byte-4] = 0x8d;
+        pBootArray[read_binaryOrigin.boot_max_size_byte-3] = 0x35;
+        pBootArray[read_binaryOrigin.boot_max_size_byte-2] = 0x00;
+        pBootArray[read_binaryOrigin.boot_max_size_byte-1] = 0x01;
         __int32u CheckSum;
         CheckSum = MakeCheckSumText((char*)&pAppArray[0],appBinaryLength);
 
