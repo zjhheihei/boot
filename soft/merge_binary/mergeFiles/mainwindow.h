@@ -10,6 +10,8 @@
 #include <QFile>
 #include <QFileInfo>
 #include <QDesktopServices>
+#include <mergebinarydata.h>
+#include <binarytohexstring.h>
 namespace Ui {
 class MainWindow;
 }
