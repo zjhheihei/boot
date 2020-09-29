@@ -17,7 +17,7 @@ class mergeBinaryData
 public:
     mergeBinaryData();
 
-    bool mergeBinary_createMerge(binaryTransfer_def in_binaryOrigin,QByteArray* out_mergeBin);
+    bool mergeBinary_createMerge(binaryTransfer_def in_binaryOrigin,QByteArray* out_mergeBin,unsigned char in_resver_detlais);
 };
 
 #endif // MERGEBINARYDATA_H
