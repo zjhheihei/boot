@@ -47,7 +47,7 @@ void bsp_read_information_user_app(sdt_int8u* out_pInf)
     pAddr = (sdt_int8u*)user_app_inf_addr;
     for(i = 0;i < 32;i++)
     {
-        *pAddr = *out_pInf;
+        *out_pInf = *pAddr;
         pAddr ++;
         out_pInf ++;
     }
@@ -60,7 +60,7 @@ void bsp_read_information_user_upgrade(sdt_int8u* out_pInf)
     pAddr = (sdt_int8u*)user_upgrade_inf_addr;
     for(i = 0;i < 32;i++)
     {
-        *pAddr = *out_pInf;
+        *out_pInf = *pAddr;
         pAddr ++;
         out_pInf ++;
     }
