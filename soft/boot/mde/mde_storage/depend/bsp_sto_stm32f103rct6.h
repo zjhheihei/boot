@@ -1,5 +1,6 @@
 //+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 #include "stm32f10x.h"
+#include "stm32f10x_iwdg.h"
 //+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 //flash map stm32f103rct6
 //256k flash,smallest unit 2k
@@ -23,13 +24,17 @@ typedef void (*pFunction)(void);
 //+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 //程序跳转到应用区
 //-----------------------------------------------------------------------------
+#define KR_KEY_Reload    ((uint16_t)0xAAAA)
+//-----------------------------------------------------------------------------
 void bsp_jump_to_user_app(void)
 {
     pFunction Jump_To_Application;
     
     #ifdef NDEBUG
-    IWDG_ReloadCounter(); 
+    // IWDG_ReloadCounter();  //加入此句，高级优化跳转到app区会硬件出错,原因待查
     #endif
+    IWDG->KR = KR_KEY_Reload;
+      
     __disable_interrupt();  
     /* Jump to user application */
     Jump_To_Application = (pFunction)(*(__IO uint32_t*)(user_app_start_addr + 4));

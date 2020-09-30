@@ -3,14 +3,14 @@
 //+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 void mde_device_system_cfg(void)
 {
-    bsp_sysclock_cfg();
     #ifdef NDEBUG
     bsp_watchdog_cfg(); 
     #endif
+    bsp_sysclock_cfg();
 }
 //+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 void mde_watchdog_reload(void)
 {
-
+    bsp_watchdog_reload();
 }
 //+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
