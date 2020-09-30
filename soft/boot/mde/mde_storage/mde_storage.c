@@ -64,15 +64,17 @@ static sdt_bool upgrade_checksum_is_ok(sdt_int32u checksum,sdt_int32u codesize)
     sdt_int8u rd_buff[4];
     sdt_int32u make_checksum = 0;
     sdt_int32u rd_data;
+    sdt_int32u count = 0;
     
     codesize = codesize/4;  //折算成32bits的大小
     while(codesize)
     {
         bsp_read_4bytes_user_upgrade(offset_addr,&rd_buff[0]);
         rd_data = pbc_arrayToInt32u_bigEndian(&rd_buff[0]);
-        make_checksum = MakeOneCheckText(rd_data,offset_addr);
+        make_checksum += MakeOneCheckText(rd_data,count);
         offset_addr += 4;
         codesize --;
+        count++;
     }
     if(checksum == make_checksum)
     {

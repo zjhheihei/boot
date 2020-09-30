@@ -132,6 +132,16 @@ void bsp_transfer_user_upgrade_to_app(sdt_int32u in_codesize)
         return;
     }
     
+    #ifdef NDEBUG
+    #else
+    //test
+    sdt_int32u test_addr;
+    sdt_int32u test_reg;
+    test_addr = user_app_inf_addr - 4; 
+    test_reg = *(sdt_int32u*)test_addr + 1;
+    //    
+    #endif
+
     FLASH_Unlock();
     FLASH_ClearFlag(FLASH_FLAG_EOP | FLASH_FLAG_PGERR | FLASH_FLAG_WRPRTERR);
     FLASH_EraseOptionBytes(); 
@@ -153,12 +163,19 @@ void bsp_transfer_user_upgrade_to_app(sdt_int32u in_codesize)
             return;
         }
     }
+    #ifdef NDEBUG
+    #else
+    //test
+    FLASHStatus = FLASH_ProgramWord(test_addr,test_reg);
+    //    
+    #endif
+    
     
     sdt_int32u app_falsh_addr;
     sdt_int32u upgrade_falsh_addr;
     sdt_int32u words_32bits;
     sdt_int32u i;
-    
+
     app_falsh_addr = user_app_inf_addr;
     upgrade_falsh_addr = user_upgrade_inf_addr;
     words_32bits = 8;         //32bytes information
