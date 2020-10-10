@@ -22,6 +22,8 @@
 //+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 typedef void (*pFunction)(void);
 //+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+//+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 //程序跳转到应用区
 //-----------------------------------------------------------------------------
 #define KR_KEY_Reload    ((uint16_t)0xAAAA)
@@ -118,6 +120,22 @@ void bsp_read_4bytes_user_upgrade(sdt_int32u in_offset_addr,sdt_int8u* out_pData
     }
 }
 //+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+void CheckWriteProtectionBits(void)
+{ 
+    if((FLASH_GetWriteProtectionOptionByte()&(~0xE0000003))==(~0xE0000003))
+    {
+    }
+    else
+    {
+        FLASH_Unlock();
+        FLASH_ClearFlag(FLASH_FLAG_EOP | FLASH_FLAG_PGERR | FLASH_FLAG_WRPRTERR);
+        FLASH_EraseOptionBytes(); 
+        FLASH_EnableWriteProtection(FLASH_WRProt_Pages0to1|FLASH_WRProt_Pages2to3);
+        FLASH_Lock();
+        NVIC_SystemReset();
+    }
+}
+//++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 void bsp_transfer_user_upgrade_to_app(sdt_int32u in_codesize)
 {
     sdt_int32u falsh_addr;
@@ -142,9 +160,9 @@ void bsp_transfer_user_upgrade_to_app(sdt_int32u in_codesize)
     //    
     #endif
 
+    CheckWriteProtectionBits();
     FLASH_Unlock();
     FLASH_ClearFlag(FLASH_FLAG_EOP | FLASH_FLAG_PGERR | FLASH_FLAG_WRPRTERR);
-    FLASH_EraseOptionBytes(); 
     
     falsh_addr = user_app_start_addr;
     while(falsh_addr < user_upgrade_start_addr)
@@ -205,7 +223,7 @@ void bsp_transfer_user_upgrade_to_app(sdt_int32u in_codesize)
         upgrade_falsh_addr += 4;
     }
 
-    //FLASHStatus=FLASH_EraseOptionBytes(); 
+    FLASHStatus=FLASH_EraseOptionBytes(); 
     FLASH_EnableWriteProtection(FLASH_WRProt_Pages0to1|FLASH_WRProt_Pages2to3|FLASH_WRProt_Pages4to5|FLASH_WRProt_Pages6to7|FLASH_WRProt_Pages8to9|\
                                 FLASH_WRProt_Pages10to11|FLASH_WRProt_Pages12to13|FLASH_WRProt_Pages14to15|FLASH_WRProt_Pages16to17|\
                                 FLASH_WRProt_Pages18to19|FLASH_WRProt_Pages20to21|FLASH_WRProt_Pages22to23|FLASH_WRProt_Pages24to25|\
