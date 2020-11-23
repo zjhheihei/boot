@@ -17,7 +17,7 @@
 #define user_upgrade_start_addr  0x00008000
 
 #define user_app_inf_addr        0x00007FE0
-#define user_upgrade_inf_addr    0x0000FFE0
+#define user_upgrade_inf_addr    0x0000F7E0
 #define page_unit_size           512
 //+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 typedef void (*pFunction)(void);
@@ -26,7 +26,6 @@ typedef void (*pFunction)(void);
 //+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 //程序跳转到应用区
 //-----------------------------------------------------------------------------
-#define KR_KEY_Reload    ((uint16_t)0xAAAA)
 //-----------------------------------------------------------------------------
 void bsp_jump_to_user_app(void)
 {
@@ -45,8 +44,9 @@ void bsp_jump_to_user_app(void)
     Jump_To_Application(); 
 }
 //+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-//32byte的信息数据
 void bsp_transfer_user_upgrade_to_app(sdt_int32u in_codesize);
+//+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+//32byte的信息数据
 //-----------------------------------------------------------------------------
 void bsp_read_information_user_app(sdt_int8u* out_pInf)
 {

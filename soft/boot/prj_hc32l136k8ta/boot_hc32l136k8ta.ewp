@@ -1682,11 +1682,11 @@
         </option>
         <option>
           <name>IlinkIcfOverride</name>
-          <state>0</state>
+          <state>1</state>
         </option>
         <option>
           <name>IlinkIcfFile</name>
-          <state>$TOOLKIT_DIR$\config\linker\HDSC\HC32L136.icf</state>
+          <state>$PROJ_DIR$\boot_hc32l13x.icf</state>
         </option>
         <option>
           <name>IlinkIcfFileSlave</name>
