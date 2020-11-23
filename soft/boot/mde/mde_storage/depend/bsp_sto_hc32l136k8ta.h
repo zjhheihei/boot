@@ -33,9 +33,9 @@ void bsp_jump_to_user_app(void)
     pFunction Jump_To_Application;
     
     #ifdef NDEBUG
-    // IWDG_ReloadCounter();  //加入此句，高级优化跳转到app区会硬件出错,原因待查
+    M0P_WDT->RST = 0x1E;
+    M0P_WDT->RST = 0xE1;
     #endif
-  //  IWDG->KR = KR_KEY_Reload;
       
     __disable_interrupt();  
     /* Jump to user application */
@@ -46,6 +46,7 @@ void bsp_jump_to_user_app(void)
 }
 //+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 //32byte的信息数据
+void bsp_transfer_user_upgrade_to_app(sdt_int32u in_codesize);
 //-----------------------------------------------------------------------------
 void bsp_read_information_user_app(sdt_int8u* out_pInf)
 {
@@ -71,6 +72,7 @@ void bsp_read_information_user_upgrade(sdt_int8u* out_pInf)
         pAddr ++;
         out_pInf ++;
     }
+   // bsp_transfer_user_upgrade_to_app(10); //test
 }
 //+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 //读取flash的数据流
@@ -81,7 +83,8 @@ void bsp_read_4bytes_user_app(sdt_int32u in_offset_addr,sdt_int8u* out_pData)
     sdt_int8u i;
     
     #ifdef NDEBUG
-    IWDG_ReloadCounter();  //大数据传输，避免watchdog timeout
+    M0P_WDT->RST = 0x1E;
+    M0P_WDT->RST = 0xE1; //大数据传输，避免watchdog timeout
     #endif
     
     if((user_app_start_addr + in_offset_addr) > user_app_inf_addr)//地址保护
@@ -104,7 +107,8 @@ void bsp_read_4bytes_user_upgrade(sdt_int32u in_offset_addr,sdt_int8u* out_pData
     sdt_int8u i;
     
     #ifdef NDEBUG
-    IWDG_ReloadCounter();  //大数据传输，避免watchdog timeout
+    M0P_WDT->RST = 0x1E;
+    M0P_WDT->RST = 0xE1; //大数据传输，避免watchdog timeout
     #endif
     
     if((user_upgrade_start_addr + in_offset_addr) > user_upgrade_inf_addr)//地址保护
@@ -120,119 +124,156 @@ void bsp_read_4bytes_user_upgrade(sdt_int32u in_offset_addr,sdt_int8u* out_pData
     }
 }
 //+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-void CheckWriteProtectionBits(void)
-{ 
-//    if((FLASH_GetWriteProtectionOptionByte()&(~0xE0000003))==(~0xE0000003))
-//    {
-//    }
-//    else
-//    {
-////        FLASH_Unlock();
-////        FLASH_ClearFlag(FLASH_FLAG_EOP | FLASH_FLAG_PGERR | FLASH_FLAG_WRPRTERR);
-////        FLASH_EraseOptionBytes(); 
-////        FLASH_EnableWriteProtection(FLASH_WRProt_Pages0to1|FLASH_WRProt_Pages2to3);
-////        FLASH_Lock();
-////        NVIC_SystemReset();
-//    }
-}
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 void bsp_transfer_user_upgrade_to_app(sdt_int32u in_codesize)
 {
-//    sdt_int32u falsh_addr;
-//    volatile FLASH_Status FLASHStatus = FLASH_COMPLETE;
-//    
-//    #ifdef NDEBUG
-//    IWDG_ReloadCounter(); //
-//    #endif
-//    
-//    if((user_app_start_addr + in_codesize) > user_app_inf_addr)//地址保护
-//    {
-//        return;
-//    }
-//    
-//    #ifdef NDEBUG
-//    #else
-//    //test
-//    sdt_int32u test_addr;
-//    sdt_int32u test_reg;
-//    test_addr = user_app_inf_addr - 4; 
-//    test_reg = *(sdt_int32u*)test_addr + 1;
-//    //    
-//    #endif
-//
-//    CheckWriteProtectionBits();
-//    FLASH_Unlock();
-//    FLASH_ClearFlag(FLASH_FLAG_EOP | FLASH_FLAG_PGERR | FLASH_FLAG_WRPRTERR);
-//    
-//    falsh_addr = user_app_start_addr;
-//    while(falsh_addr < user_upgrade_start_addr)
-//    {
-//        #ifdef NDEBUG
-//        IWDG_ReloadCounter(); //
-//        #endif
-//
-//        FLASHStatus = FLASH_ErasePage(falsh_addr);   //Erase Appliction
-//        if(FLASHStatus == FLASH_COMPLETE)
-//        {
-//            falsh_addr += page_unit_size;
-//        }
-//        else
-//        {
-//            return;
-//        }
-//    }
-//    #ifdef NDEBUG
-//    #else
-//    //test
-//    FLASHStatus = FLASH_ProgramWord(test_addr,test_reg);
-//    //    
-//    #endif
-//    
-//    
-//    sdt_int32u app_falsh_addr;
-//    sdt_int32u upgrade_falsh_addr;
-//    sdt_int32u words_32bits;
-//    sdt_int32u i;
-//
-//    app_falsh_addr = user_app_inf_addr;
-//    upgrade_falsh_addr = user_upgrade_inf_addr;
-//    words_32bits = 8;         //32bytes information
-//    for(i=0;i<words_32bits;i++)
-//    {
-//        #ifdef NDEBUG
-//        IWDG_ReloadCounter(); //
-//        #endif
-//        
-//        FLASHStatus = FLASH_ProgramWord(app_falsh_addr,*(sdt_int32u*)upgrade_falsh_addr);
-//        app_falsh_addr += 4;
-//        upgrade_falsh_addr += 4;
-//    }
-//    
-//    app_falsh_addr = user_app_start_addr;
-//    upgrade_falsh_addr = user_upgrade_start_addr;
-//    words_32bits = in_codesize/4;   //program data
-//
-//    for(i=0;i<words_32bits;i++)
-//    {
-//        #ifdef NDEBUG
-//        IWDG_ReloadCounter(); //
-//        #endif
-//        
-//        FLASHStatus = FLASH_ProgramWord(app_falsh_addr,*(sdt_int32u*)upgrade_falsh_addr);
-//        app_falsh_addr += 4;
-//        upgrade_falsh_addr += 4;
-//    }
-//
-//    FLASHStatus=FLASH_EraseOptionBytes(); 
-//    FLASH_EnableWriteProtection(FLASH_WRProt_Pages0to1|FLASH_WRProt_Pages2to3|FLASH_WRProt_Pages4to5|FLASH_WRProt_Pages6to7|FLASH_WRProt_Pages8to9|\
-//                                FLASH_WRProt_Pages10to11|FLASH_WRProt_Pages12to13|FLASH_WRProt_Pages14to15|FLASH_WRProt_Pages16to17|\
-//                                FLASH_WRProt_Pages18to19|FLASH_WRProt_Pages20to21|FLASH_WRProt_Pages22to23|FLASH_WRProt_Pages24to25|\
-//                                FLASH_WRProt_Pages26to27|FLASH_WRProt_Pages28to29|FLASH_WRProt_Pages30to31|FLASH_WRProt_Pages32to33|\
-//                                FLASH_WRProt_Pages34to35|FLASH_WRProt_Pages36to37|FLASH_WRProt_Pages38to39|FLASH_WRProt_Pages40to41|\
-//                                FLASH_WRProt_Pages42to43|FLASH_WRProt_Pages44to45|FLASH_WRProt_Pages46to47|FLASH_WRProt_Pages48to49|\
-//                                FLASH_WRProt_Pages50to51|FLASH_WRProt_Pages52to53|FLASH_WRProt_Pages54to55|FLASH_WRProt_Pages56to57\
-//                                );
-//    FLASH_Lock();
+    sdt_int32u falsh_addr;
+    
+    #ifdef NDEBUG
+    M0P_WDT->RST = 0x1E;
+    M0P_WDT->RST = 0xE1; //大数据传输，避免watchdog timeout
+    #endif
+    
+    if((user_app_start_addr + in_codesize) > user_app_inf_addr)//地址保护
+    {
+        return;
+    }
+    
+    M0P_FLASH->BYPASS  = 0x5A5A;//配置24M的flash操作时间
+    M0P_FLASH->BYPASS  = 0xA5A5; 
+    M0P_FLASH->TNVS    = 0xC0;
+    
+    M0P_FLASH->BYPASS  = 0x5A5A;
+    M0P_FLASH->BYPASS  = 0xA5A5; 
+    M0P_FLASH->TPGS    = 0x8A;
+    
+    M0P_FLASH->BYPASS  = 0x5A5A;
+    M0P_FLASH->BYPASS  = 0xA5A5; 
+    M0P_FLASH->TPROG   = 0xA2;
+    
+    M0P_FLASH->BYPASS  = 0x5A5A;
+    M0P_FLASH->BYPASS  = 0xA5A5; 
+    M0P_FLASH->TSERASE = 0x1A5E0;
+    
+    M0P_FLASH->BYPASS  = 0x5A5A;
+    M0P_FLASH->BYPASS  = 0xA5A5; 
+    M0P_FLASH->TMERASE = 0xCD140;
+    
+    M0P_FLASH->BYPASS  = 0x5A5A;
+    M0P_FLASH->BYPASS  = 0xA5A5; 
+    M0P_FLASH->TPRCV   = 0x90;
+
+    M0P_FLASH->BYPASS  = 0x5A5A;
+    M0P_FLASH->BYPASS  = 0xA5A5; 
+    M0P_FLASH->TSRCV   = 0x5A0;
+        
+    M0P_FLASH->BYPASS  = 0x5A5A;
+    M0P_FLASH->BYPASS  = 0xA5A5; 
+    M0P_FLASH->TMRCV   = 0x1770;
+    
+    #ifdef NDEBUG
+    #else//test
+    sdt_int32u test_addr;
+    sdt_int32u test_reg;
+    test_addr = user_app_inf_addr - 4; 
+    test_reg = *(sdt_int32u*)test_addr + 1;
+    #endif
+    
+    do
+    {
+        M0P_FLASH->BYPASS = 0x5A5A;      //unlock
+        M0P_FLASH->BYPASS = 0xA5A5;    
+        M0P_FLASH->SLOCK = 0xfffffffe;   //only lock boot's sector
+    }while(M0P_FLASH->SLOCK != 0xfffffffe);
+    do
+    {
+        M0P_FLASH->BYPASS = 0x5A5A;      //unlock
+        M0P_FLASH->BYPASS = 0xA5A5; 
+        M0P_FLASH->CR_f.OP = 0x02;       //sector erase
+    }while(0x02 != M0P_FLASH->CR_f.OP);
+
+    falsh_addr = user_app_start_addr;
+    while(falsh_addr < user_upgrade_start_addr)  //erase user.app 
+    {
+        #ifdef NDEBUG
+        M0P_WDT->RST = 0x1E;
+        M0P_WDT->RST = 0xE1;
+        #endif
+        
+        *((sdt_int8u*)falsh_addr) = 0x00;   //Erase Appliction
+        while(0 != M0P_FLASH->CR_f.BUSY)
+        {
+        }
+        falsh_addr += page_unit_size;
+    }
+    
+    #ifdef NDEBUG
+    #else//test
+    do
+    {
+        M0P_FLASH->BYPASS = 0x5A5A;      //unlock
+        M0P_FLASH->BYPASS = 0xA5A5; 
+        M0P_FLASH->CR_f.OP = 0x01;      //program
+    }while(0x01 != M0P_FLASH->CR_f.OP);
+    *(sdt_int32u*)test_addr = test_reg; 
+    #endif
+    
+    
+    sdt_int32u app_falsh_addr;
+    sdt_int32u upgrade_falsh_addr;
+    sdt_int32u words_32bits;
+    sdt_int32u i;
+
+    do
+    {
+        M0P_FLASH->BYPASS = 0x5A5A;      //unlock
+        M0P_FLASH->BYPASS = 0xA5A5; 
+        M0P_FLASH->CR_f.OP = 0x01;      //program
+    }while(0x01 != M0P_FLASH->CR_f.OP);
+    
+    app_falsh_addr = user_app_inf_addr;
+    upgrade_falsh_addr = user_upgrade_inf_addr;
+    words_32bits = 8;         //32bytes information
+    for(i=0;i<words_32bits;i++)
+    {
+        #ifdef NDEBUG
+        M0P_WDT->RST = 0x1E;
+        M0P_WDT->RST = 0xE1; 
+        #endif
+        
+        *(sdt_int32u*)app_falsh_addr = *(sdt_int32u*)upgrade_falsh_addr;
+        while(0 != M0P_FLASH->CR_f.BUSY)
+        {
+        }
+        app_falsh_addr += 4;
+        upgrade_falsh_addr += 4;
+    }
+    
+    app_falsh_addr = user_app_start_addr;
+    upgrade_falsh_addr = user_upgrade_start_addr;
+    words_32bits = in_codesize/4;   //program data
+
+    for(i=0;i<words_32bits;i++)
+    {
+        #ifdef NDEBUG
+        M0P_WDT->RST = 0x1E;
+        M0P_WDT->RST = 0xE1; 
+        #endif
+        
+        *(sdt_int32u*)app_falsh_addr = *(sdt_int32u*)upgrade_falsh_addr;
+        while(0 != M0P_FLASH->CR_f.BUSY)
+        {
+        }
+        app_falsh_addr += 4;
+        upgrade_falsh_addr += 4;
+    }
+
+    do
+    {
+        M0P_FLASH->BYPASS = 0x5A5A;      //unlock
+        M0P_FLASH->BYPASS = 0xA5A5;    
+        M0P_FLASH->SLOCK = 0xffff0000;   // lock boot and app sector
+    }while(M0P_FLASH->SLOCK != 0xffff0000);
 }
 //+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 //+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++

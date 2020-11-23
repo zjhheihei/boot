@@ -9,6 +9,10 @@ int main (void)
 //-----------------------------------------------------------------------------
     while(1)
     {
+        #ifdef NDEBUG
+        mde_watchdog_reload();
+        #else
+        #endif  
         bootload_task();
     }
 }
