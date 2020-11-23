@@ -32,6 +32,14 @@ void MainWindow::on_comboBox_currentIndexChanged(const QString &arg1)
         ui->chipaddr->append("app:     0x00 8800 -- 0x01 03FF");
         ui->chipaddr->append("upgrade：0x01 0400 -- 0x01 7FFF");
     }
+    else if(arg1.contains("HC32L136K8TA",Qt::CaseInsensitive))
+    {
+        ui->chipaddr->clear();
+        ui->chipaddr->append("MCU:     HC32L136K8TA");
+        ui->chipaddr->append("boot：   0x0000 0000 -- 0x0000 07FF");
+        ui->chipaddr->append("app:     0x0000 0800 -- 0x0000 7FFF");
+        ui->chipaddr->append("upgrade：0x0000 8000 -- 0x0000 F7FF");
+    }
 }
 //+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 //创建合并后的hex文件
@@ -144,6 +152,13 @@ void MainWindow::on_pushButton_CreatMerge_clicked()
         app_max_sizeofbyte = 1024*31;
         flash_addr_str = 0x00008000;
         flash_resver_data = 0x00;//保留数据为0x00
+    }
+    else if(rd_mcu_type.contains("HC32L136K8TA",Qt::CaseInsensitive))
+    {
+        boot_max_sizeofbyte = 1024*2;
+        app_max_sizeofbyte = 1024*30;
+        flash_addr_str = 0x00000000;
+        flash_resver_data = 0xff;//保留数据为0xff
     }
 //------------------------------------------------------------------------------------
     QByteArray MergeQbyte;
