@@ -35,8 +35,6 @@ void bsp_jump_to_user_app(void)
     M0P_WDT->RST = 0x1E;
     M0P_WDT->RST = 0xE1;
     #endif
-      
-    __disable_interrupt();  
     /* Jump to user application */
     Jump_To_Application = (pFunction)(*(__IO uint32_t*)(user_app_start_addr + 4));
     /* Initialize user application's Stack Pointer */

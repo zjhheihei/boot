@@ -40,6 +40,7 @@ static void bootload_task(void)
         case start:
         {
             bootStatus = checkAndUpdating;
+            //mde_jump_to_user_app();  //test jump
             break;
         }
         case checkAndUpdating:
