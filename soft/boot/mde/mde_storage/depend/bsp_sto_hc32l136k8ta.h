@@ -72,7 +72,7 @@ void bsp_read_information_user_upgrade(sdt_int8u* out_pInf)
         pAddr ++;
         out_pInf ++;
     }
-   // bsp_transfer_user_upgrade_to_app(10); //test
+    //bsp_transfer_user_upgrade_to_app(30688); //test
 }
 //+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 //读取flash的数据流
@@ -260,6 +260,7 @@ void bsp_transfer_user_upgrade_to_app(sdt_int32u in_codesize)
         M0P_WDT->RST = 0xE1; 
         #endif
         
+        //*(sdt_int32u*)app_falsh_addr = *(sdt_int32u*)upgrade_falsh_addr + i +1;  //test
         *(sdt_int32u*)app_falsh_addr = *(sdt_int32u*)upgrade_falsh_addr;
         while(0 != M0P_FLASH->CR_f.BUSY)
         {
