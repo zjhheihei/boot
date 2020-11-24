@@ -32,8 +32,8 @@ void bsp_jump_to_user_app(void)
     pFunction Jump_To_Application;
     
     #ifdef NDEBUG
-    M0P_WDT->RST = 0x1E;
-    M0P_WDT->RST = 0xE1;
+    //M0P_WDT->RST = 0x1E;
+    //M0P_WDT->RST = 0xE1;
     #endif
     /* Jump to user application */
     Jump_To_Application = (pFunction)(*(__IO uint32_t*)(user_app_start_addr + 4));

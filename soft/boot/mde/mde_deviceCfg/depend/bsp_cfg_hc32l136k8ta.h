@@ -56,7 +56,8 @@ typedef enum en_sysctrl_pclk_div
 
 void bsp_sysclock_cfg(void)
 {
-     __disable_interrupt();   
+    __disable_interrupt();  
+    M0P_SYSCTRL->PERI_CLKEN_f.FLASH = 1;  //enable flash control
       //时钟切换到RCL      
     M0P_SYSCTRL->RCL_CR_f.TRIM = RCL_CR_TRIM_38400_VAL;
     M0P_SYSCTRL->RCL_CR_f.STARTUP = 0x01;   //16个周期
@@ -97,19 +98,6 @@ void bsp_sysclock_cfg(void)
     M0P_SYSCTRL->SYSCTRL2 = 0x5A5A;         //unlock
     M0P_SYSCTRL->SYSCTRL2 = 0xA5A5;
     M0P_SYSCTRL->SYSCTRL0_f.PCLK_PRS = SysctrlPclkDiv1;  //PCLK
-    
-    M0P_SYSCTRL->PERI_CLKEN_f.FLASH = 1;  //enable flash control
-    //debug start
-    #ifdef NDEBUG
-    #else
-//    M0P_SYSCTRL->PERI_CLKEN_f.GPIO = 1;
-//    M0P_GPIO->PCDIR_f.PC13 = 0;
-//    volatile sdt_int32u i;
-//    for(i=0;i < 500000;i++);
-//    M0P_GPIO->PCOUT_f.PC13 = 0;
-//    for(i=0;i < 500000;i++);
-//    M0P_GPIO->PCOUT_f.PC13 = 1;    
-    #endif
 
 }
 //-----------------------------------------------------------------------------
