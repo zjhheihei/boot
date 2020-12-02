@@ -3,12 +3,12 @@ storage
       |
 	  |-- boot 
 	  |      |
-	  |      |--version flag 0x8d350001(32bits,in the end)
+	  |      `--version flag 0x8d350001(32bits,in the end)
 	  |
 	  |-- user.app  
 	  |         |
 	  |         |-- execution   partition
-	  |         ‘-- information partition(32byts is valid in end，4x8W)
+	  |         `-- information partition(32byts is valid in end，4x8W)
 	  |                      |
 	  |                      |-- serial number(anticode)
 	  |                      |-- upgrade flag(anticode)
@@ -17,12 +17,12 @@ storage
 	  |                      |-- serial number
 	  |                      |-- upgrade flag
 	  |                      |-- checksum
-	  |                      ‘-- execution code size
+	  |                      `-- execution code size
 	  |
       |-- user.upgrade	  
 	  |         |
 	  |         |-- execution   partition
-	  |         ‘-- information partition
+	  |         `-- information partition
 	  |                      |
 	  |                      |-- serial number(anticode)
 	  |                      |-- upgrade flag(anticode)
@@ -31,11 +31,11 @@ storage
 	  |                      |-- serial number
 	  |                      |-- upgrade flag
 	  |                      |              | 
-	  |                      |              |-- 0x519AE493--complete  0x8D731A75--updating
+	  |                      |              `-- 0x519AE493--complete  0x8D731A75--updating
 	  |                      |-- checksum
-	  |                      ‘-- execution code size
+	  |                      `-- execution code size
 	  |
-      ‘-- reserve
+      `-- reserve
 //-----------------------------------------------------------------------------------
 //checksum C code
 //----------------------------------------------------------------------------------
