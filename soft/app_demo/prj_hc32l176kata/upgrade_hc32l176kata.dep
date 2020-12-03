@@ -1,0 +1,454 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<project>
+  <fileVersion>2</fileVersion>
+  <fileChecksum>1991732854</fileChecksum>
+  <configuration>
+    <name>Debug</name>
+    <outputs>
+      <file>$PROJ_DIR$\Debug\Obj\bsp_random.pbi</file>
+      <file>$PROJ_DIR$\..\mde\mde_watchdog\depend\snail_data_types.h</file>
+      <file>$PROJ_DIR$\Debug\Obj\bsp_random.o</file>
+      <file>$PROJ_DIR$\Debug\Obj\bps_watchdog.o</file>
+      <file>$PROJ_DIR$\Debug\Obj\bps_watchdog.pbi</file>
+      <file>$PROJ_DIR$\Debug\Obj\mde_watchdog.pbi</file>
+      <file>$PROJ_DIR$\Debug\Obj\mde_watchdog.o</file>
+      <file>$PROJ_DIR$\Debug\Obj\bsp_bough_link.pbi</file>
+      <file>$TOOLKIT_DIR$\inc\c\intrinsics.h</file>
+      <file>$PROJ_DIR$\Debug\Obj\bsp_bough_link.o</file>
+      <file>$TOOLKIT_DIR$\inc\c\ycheck.h</file>
+      <file>$PROJ_DIR$\Debug\Obj\app_upgrade_easy.pbi</file>
+      <file>$PROJ_DIR$\Debug\Obj\main.o</file>
+      <file>$PROJ_DIR$\Debug\Obj\main.pbi</file>
+      <file>$PROJ_DIR$\Debug\Obj\app_general.pbi</file>
+      <file>$PROJ_DIR$\Debug\Obj\upgrade_hc32l176kata.pbd</file>
+      <file>$PROJ_DIR$\..\pbc\pbc_dataConvert\pbc_dataConvert.h</file>
+      <file>$PROJ_DIR$\..\mde\mde_bough_link\mde_bough_link_half.h</file>
+      <file>$PROJ_DIR$\..\app\snail_data_types.h</file>
+      <file>$PROJ_DIR$\..\pbc\pbc_sysTick\pbc_sysTick.h</file>
+      <file>$PROJ_DIR$\..\mde\mde_sys_clock\mde_system_clock.h</file>
+      <file>$PROJ_DIR$\..\mde\mde_upgradeFiles\mde_upgradeFiles.h</file>
+      <file>$PROJ_DIR$\..\app\app_cfg.h</file>
+      <file>$PROJ_DIR$\..\app\app_general.c</file>
+      <file>$PROJ_DIR$\..\app\app_upgrade_easy.h</file>
+      <file>$PROJ_DIR$\..\app\app_upgrade_easy.c</file>
+      <file>$PROJ_DIR$\..\app\main.c</file>
+      <file>$PROJ_DIR$\Debug\Obj\app_general.o</file>
+      <file>$PROJ_DIR$\..\app\app_general.h</file>
+      <file>$PROJ_DIR$\Debug\Obj\app_upgrade_easy.o</file>
+      <file>$PROJ_DIR$\..\mde\mde_bough_link\depend\snail_data_types.h</file>
+      <file>$PROJ_DIR$\Debug\Obj\mde_bough_link_half.pbi</file>
+      <file>$PROJ_DIR$\..\mde\mde_bough_link\depend\bsp_bough_link.h</file>
+      <file>$PROJ_DIR$\Debug\Obj\bsp_upgradeFiles.o</file>
+      <file>$PROJ_DIR$\..\mde\mde_random\depend\bsp_random.c</file>
+      <file>$PROJ_DIR$\..\mde\mde_sys_clock\mde_system_clock.c</file>
+      <file>$PROJ_DIR$\..\pbc\pbc_crc16\pbc_crc16.h</file>
+      <file>$PROJ_DIR$\Debug\Obj\mde_bough_link_half.o</file>
+      <file>$PROJ_DIR$\..\mde\mde_sys_clock\depend\bps_system_clock.h</file>
+      <file>$PROJ_DIR$\..\mde\mde_sys_clock\depend\snail_data_types.h</file>
+      <file>$PROJ_DIR$\Debug\Obj\bsp_upgradeFiles.pbi</file>
+      <file>$PROJ_DIR$\..\pbc\pbc_dataConvert\pbc_dataConvert.c</file>
+      <file>$PROJ_DIR$\Debug\Obj\pbc_crc16.o</file>
+      <file>$PROJ_DIR$\..\pbc\pbc_crc16\depend\snail_data_types.h</file>
+      <file>$PROJ_DIR$\..\mde\mde_watchdog\depend\bps_watchdog.h</file>
+      <file>$PROJ_DIR$\Debug\Obj\pbc_crc16.pbi</file>
+      <file>$PROJ_DIR$\Debug\Obj\bsp_sysTick.o</file>
+      <file>$PROJ_DIR$\..\pbc\pbc_dataConvert\depend\snail_data_types.h</file>
+      <file>$PROJ_DIR$\Debug\Obj\pbc_dataConvert.o</file>
+      <file>$PROJ_DIR$\Debug\Obj\bsp_sysTick.pbi</file>
+      <file>$PROJ_DIR$\Debug\Obj\pbc_dataConvert.pbi</file>
+      <file>$PROJ_DIR$\..\mde\mde_watchdog\depend\bps_watchdog.c</file>
+      <file>$PROJ_DIR$\Debug\Exe\upgrade_hc32l176kata.out</file>
+      <file>$PROJ_DIR$\..\mde\mde_watchdog\mde_watchdog.c</file>
+      <file>$PROJ_DIR$\..\mde\mde_random\mde_random.c</file>
+      <file>$PROJ_DIR$\..\mde\mde_upgradeFiles\depend\bsp_upgradeFiles.c</file>
+      <file>$PROJ_DIR$\..\mde\mde_upgradeFiles\mde_upgradeFiles.c</file>
+      <file>$PROJ_DIR$\..\pbc\pbc_crc16\pbc_crc16.c</file>
+      <file>$PROJ_DIR$\..\mde\mde_random\mde_random.h</file>
+      <file>$PROJ_DIR$\..\mde\mde_watchdog\mde_watchdog.h</file>
+      <file>$PROJ_DIR$\..\mde\mde_bough_link\mde_bough_link_half.c</file>
+      <file>$PROJ_DIR$\Debug\Obj\mde_upgradeFiles.o</file>
+      <file>$PROJ_DIR$\..\mde\mde_upgradeFiles\depend\bsp_upgradeFiles.h</file>
+      <file>$PROJ_DIR$\Debug\Obj\mde_upgradeFiles.pbi</file>
+      <file>$PROJ_DIR$\..\mde\mde_upgradeFiles\depend\snail_data_types.h</file>
+      <file>$PROJ_DIR$\..\mde\mde_bough_link\solid_bough_link_half.h</file>
+      <file>$PROJ_DIR$\Debug\Obj\mde_system_clock.o</file>
+      <file>$PROJ_DIR$\Debug\Obj\mde_system_clock.pbi</file>
+      <file>$PROJ_DIR$\..\pbc\pbc_sysTick\pbc_sysTick.c</file>
+      <file>$PROJ_DIR$\..\mde\mde_sys_clock\depend\bps_system_clock.c</file>
+      <file>$PROJ_DIR$\Debug\Obj\pbc_sysTick.pbi</file>
+      <file>$PROJ_DIR$\Debug\Obj\pbc_sysTick.o</file>
+      <file>$PROJ_DIR$\..\pbc\pbc_sysTick\depend\bsp_sysTick.h</file>
+      <file>$PROJ_DIR$\..\pbc\pbc_sysTick\depend\snail_data_types.h</file>
+      <file>$PROJ_DIR$\..\mde\mde_random\depend\bsp_random.h</file>
+      <file>$PROJ_DIR$\Debug\Obj\mde_random.o</file>
+      <file>$PROJ_DIR$\Debug\Obj\mde_random.pbi</file>
+      <file>$PROJ_DIR$\..\mde\mde_random\depend\snail_data_types.h</file>
+      <file>$PROJ_DIR$\Debug\Obj\bps_system_clock.pbi</file>
+      <file>$PROJ_DIR$\Debug\Obj\bps_system_clock.o</file>
+      <file>$PROJ_DIR$\..\mde\mde_bough_link\depend\bsp_bough_link.c</file>
+      <file>$PROJ_DIR$\..\pbc\pbc_sysTick\depend\bsp_sysTick.c</file>
+    </outputs>
+    <file>
+      <name>[ROOT_NODE]</name>
+      <outputs>
+        <tool>
+          <name>ILINK</name>
+          <file> 52</file>
+        </tool>
+      </outputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\app\app_general.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 14</file>
+        </tool>
+        <tool>
+          <name>ICCARM</name>
+          <file> 27</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 16 18 17 19 20 22 21 58 59 28 24</file>
+        </tool>
+        <tool>
+          <name>ICCARM</name>
+          <file> 22 18 19 16 20 17 21 58 59 28 24</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\app\app_upgrade_easy.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 11</file>
+        </tool>
+        <tool>
+          <name>ICCARM</name>
+          <file> 29</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 58 16 18 17 28 22 19 20 21 59 24</file>
+        </tool>
+        <tool>
+          <name>ICCARM</name>
+          <file> 22 18 19 16 20 17 21 58 59 28 24</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\app\main.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 13</file>
+        </tool>
+        <tool>
+          <name>ICCARM</name>
+          <file> 12</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 16 18 17 19 20 22 21 58 59 28 24</file>
+        </tool>
+        <tool>
+          <name>ICCARM</name>
+          <file> 22 18 19 16 20 17 21 58 59 28 24</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\mde\mde_random\depend\bsp_random.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 0</file>
+        </tool>
+        <tool>
+          <name>ICCARM</name>
+          <file> 2</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 77</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\mde\mde_sys_clock\mde_system_clock.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 67</file>
+        </tool>
+        <tool>
+          <name>ICCARM</name>
+          <file> 66</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 38 20 39</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\pbc\pbc_dataConvert\pbc_dataConvert.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 50</file>
+        </tool>
+        <tool>
+          <name>ICCARM</name>
+          <file> 48</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 47</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\mde\mde_watchdog\depend\bps_watchdog.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 4</file>
+        </tool>
+        <tool>
+          <name>ICCARM</name>
+          <file> 3</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 1</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\mde\mde_watchdog\mde_watchdog.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 5</file>
+        </tool>
+        <tool>
+          <name>ICCARM</name>
+          <file> 6</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 44</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\mde\mde_random\mde_random.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 76</file>
+        </tool>
+        <tool>
+          <name>ICCARM</name>
+          <file> 75</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 77 74</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\mde\mde_upgradeFiles\depend\bsp_upgradeFiles.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 40</file>
+        </tool>
+        <tool>
+          <name>ICCARM</name>
+          <file> 33</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 64</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\mde\mde_upgradeFiles\mde_upgradeFiles.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 63</file>
+        </tool>
+        <tool>
+          <name>ICCARM</name>
+          <file> 61</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 19 21 16 62 64</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\pbc\pbc_crc16\pbc_crc16.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 45</file>
+        </tool>
+        <tool>
+          <name>ICCARM</name>
+          <file> 42</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 43</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\mde\mde_bough_link\mde_bough_link_half.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 31</file>
+        </tool>
+        <tool>
+          <name>ICCARM</name>
+          <file> 37</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 36 19 17 20 65 32 30</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\pbc\pbc_sysTick\pbc_sysTick.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 70</file>
+        </tool>
+        <tool>
+          <name>ICCARM</name>
+          <file> 71</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 19 73 72</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\mde\mde_sys_clock\depend\bps_system_clock.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 78</file>
+        </tool>
+        <tool>
+          <name>ICCARM</name>
+          <file> 79</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 39</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\mde\mde_bough_link\depend\bsp_bough_link.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 7</file>
+        </tool>
+        <tool>
+          <name>ICCARM</name>
+          <file> 9</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 10 17 8 30</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\pbc\pbc_sysTick\depend\bsp_sysTick.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 49</file>
+        </tool>
+        <tool>
+          <name>ICCARM</name>
+          <file> 46</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 73 8 10 72</file>
+        </tool>
+      </inputs>
+    </file>
+    <forcedrebuild>
+      <name>[MULTI_TOOL]</name>
+      <tool>ILINK</tool>
+    </forcedrebuild>
+    <forcedrebuild>
+      <name>[REBUILD_ALL]</name>
+    </forcedrebuild>
+  </configuration>
+  <configuration>
+    <name>Release</name>
+    <outputs/>
+    <forcedrebuild>
+      <name>[MULTI_TOOL]</name>
+      <tool>ILINK</tool>
+    </forcedrebuild>
+  </configuration>
+</project>
+
+
