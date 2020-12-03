@@ -2,7 +2,7 @@
 
 <project>
   <fileVersion>2</fileVersion>
-  <fileChecksum>2610527057</fileChecksum>
+  <fileChecksum>2297394229</fileChecksum>
   <configuration>
     <name>Debug</name>
     <outputs>
@@ -381,6 +381,7 @@
       <file>$PROJ_DIR$\..\pbc\pbc_dataConvert\depend\snail_data_types.h</file>
       <file>$PROJ_DIR$\chip_select.h</file>
       <file>$PROJ_DIR$\Release\List\boot_hc32l176kata.map</file>
+      <file>$PROJ_DIR$\Release\Exe\boot_hc32l176kata.bin</file>
     </outputs>
     <file>
       <name>[ROOT_NODE]</name>
@@ -424,6 +425,10 @@
         <tool>
           <name>ILINK</name>
           <file> 73</file>
+        </tool>
+        <tool>
+          <name>OBJCOPY</name>
+          <file> 74</file>
         </tool>
       </outputs>
       <inputs>
