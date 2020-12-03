@@ -2359,6 +2359,24 @@
       </file>
     </group>
     <group>
+      <name>mde_led_blink</name>
+      <group>
+        <name>depend</name>
+        <file>
+          <name>$PROJ_DIR$\..\mde\mde_led_blink\depend\bsp_led_blink.c</name>
+        </file>
+        <file>
+          <name>$PROJ_DIR$\..\mde\mde_led_blink\depend\bsp_led_blink.h</name>
+        </file>
+      </group>
+      <file>
+        <name>$PROJ_DIR$\..\mde\mde_led_blink\mde_led_blink.c</name>
+      </file>
+      <file>
+        <name>$PROJ_DIR$\..\mde\mde_led_blink\mde_led_blink.h</name>
+      </file>
+    </group>
+    <group>
       <name>mde_random</name>
       <group>
         <name>depend</name>

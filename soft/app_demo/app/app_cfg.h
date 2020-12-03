@@ -11,6 +11,7 @@
 #include "..\.\mde\mde_bough_link\mde_bough_link_half.h"
 #include "..\.\mde\mde_upgradeFiles\mde_upgradeFiles.h"
 #include "..\.\mde\mde_random\mde_random.h"
+#include "..\.\mde\mde_led_blink\mde_led_blink.h"
 #include "..\.\mde\mde_watchdog\mde_watchdog.h"
 //------------------------------------------------------------------------------
 #include ".\app_general.h"
