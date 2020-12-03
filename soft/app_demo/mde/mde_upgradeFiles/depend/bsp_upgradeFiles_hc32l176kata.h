@@ -1,28 +1,29 @@
 //+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 //+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 #include ".\snail_data_types.h"
-#include "hc32l13x.h"
+#include "hc32l17x.h"
 //+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-//flash map hc32l136k8ta
-//64k flash,smallest unit 512b,128page
-//0x0000 0000 -- 0x0000 FFFF
+//flash map hc32l176kata
+//128k flash,smallest unit 512b,256page
+//0x0000 0000 -- 0x0001 FFFF
 //boot
-//0x0000 0000 -- 0x0000 07FF     2k      4  page
+//0x0000 0000 -- 0x0000 0FFF     4k      8  page
 //user.app 运行区
-//0x0000 0800 -- 0x0000 7FFF     30k    60  page  
+//0x0000 1000 -- 0x0000 FFFF     60k    120 page  
 //user.upgrade 升级区
-//0x0000 8000 -- 0x0000 F7FF     30k    60  page  
+//0x0001 0000 -- 0x0001 EFFF     60k    120 page  
 //reserve                    
-//0x0000 F800 -- 0x0000 FFFF     2k     4   page 
+//0x0001 F000 -- 0x0001 FFFF     4k      8  page 
 //+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-#define user_app_start_addr      0x00000800
-#define user_upgrade_start_addr  0x00008000
+//+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+#define user_app_start_addr      0x00001000
+#define user_upgrade_start_addr  0x00010000
 
-#define user_app_inf_addr        0x00007FE0
-#define user_upgrade_inf_addr    0x0000F7E0
-#define user_upgrade_end_addr    0x0000F7FF
+#define user_app_inf_addr        0x0000FFE0
+#define user_upgrade_inf_addr    0x0001EFE0
+#define user_upgrade_end_addr    0x0001EFFF
 #define page_unit_size           512
-#define user_upgrade_inf_page    0x0000F600
+#define user_upgrade_inf_page    0x0001EE00
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 //------------------------------------------------------------------------------
 //名称:读取app区的信息内容32bytes
@@ -154,14 +155,14 @@ void bsp_write_information_user_upgrade(sdt_int8u* in_pBuff)
     sdt_int32u backup[120];
     sdt_int32u falsh_addr;
     
-    #ifdef NDEBUG
-    while(M0P_FLASH->SLOCK != 0xffff0000)
+
+    do
     {
         M0P_FLASH->BYPASS = 0x5A5A;      //unlock
         M0P_FLASH->BYPASS = 0xA5A5;    
-        M0P_FLASH->SLOCK = 0xffff0000;   // lock boot and app sector
-    }
-    #endif
+        M0P_FLASH->SLOCK1 = 0xffffffff;   // lock boot and app sector
+    }while(M0P_FLASH->SLOCK1 != 0xffffffff);
+
     falsh_addr = user_upgrade_inf_page;
     for(i = 0;i < 120;i++)
     {

@@ -1,6 +1,6 @@
 //+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 #include ".\snail_data_types.h"
-#include "hc32l13x.h"
+#include "hc32l17x.h"
 //+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 typedef enum en_sysctrl_clk_source
 {
@@ -57,9 +57,9 @@ typedef enum en_sysctrl_pclk_div
 void bsp_clock_cfg(void)
 {
     #ifdef NDEBUG
-    *(volatile uint32_t*)0xE000ED08 = 0x00000800;  //app_vect_table
+    *(volatile uint32_t*)0xE000ED08 = 0x00001000;  //app_vect_table
     #endif
-    M0P_SYSCTRL->PERI_CLKEN_f.FLASH = 1;
+    M0P_SYSCTRL->PERI_CLKEN0_f.FLASH = 1;
     //时钟切换到RCL                                    
     M0P_SYSCTRL->RCL_CR_f.TRIM = RCL_CR_TRIM_38400_VAL;
     M0P_SYSCTRL->RCL_CR_f.STARTUP = 0x01;   //16个周期

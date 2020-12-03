@@ -2,11 +2,11 @@
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 #include ".\snail_data_types.h"
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-#include "hc32l13x.h"
+#include "hc32l17x.h"
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 void bsp_random_cfg(void)
 {
-    M0P_SYSCTRL->PERI_CLKEN_f.RNG = 1;
+    M0P_SYSCTRL->PERI_CLKEN0_f.RNG = 1;
     
     M0P_TRNG->CR_f.RNGCIR_EN = 1;
     M0P_TRNG->MODE_f.LOAD = 1;

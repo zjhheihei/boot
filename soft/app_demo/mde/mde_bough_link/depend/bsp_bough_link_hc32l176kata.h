@@ -5,9 +5,9 @@
 #endif
 //-------------------------------------------------------------------------------------------------
 #include "..\mde_bough_link_half.h"
-#include "hc32l13x.h"
+#include "hc32l17x.h"
 #include "intrinsics.h"
-#include "interrupts_hc32l13x.h"
+#include "interrupts_hc32l17x.h"
 //-------------------------------------------------------------------------------------------------
   /**
   *******************************************************************************
@@ -24,44 +24,6 @@
     DmaTransferComplete             = 5U,    ///< 成功传输完成
     DmaTransferPause                = 7U,    ///< 传输暂停      
   } en_dma_stat_t;
-  /**
-  *******************************************************************************
-  ** \brief DMA 触发源选择
-  **
-  ******************************************************************************/  
-  typedef enum stc_dma_trig_sel
-  {
-    DmaSWTrig                         = 0U,     ///< Select DMA software trig 
-    DmaSPI0RXTrig                     = 32U,    ///< Select DMA hardware trig 0
-    DmaSPI0TXTrig                     = 33U,    ///< Select DMA hardware trig 1
-    DmaSPI1RXTrig                     = 34U,    ///< Select DMA hardware trig 2
-    DmaSPI1TXTrig                     = 35U,    ///< Select DMA hardware trig 3
-    DmaADCJQRTrig                     = 36U,    ///< Select DMA hardware trig 4
-    DmaADCSQRTrig                     = 37U,    ///< Select DMA hardware trig 5
-    DmaLCDTxTrig                      = 38U,    ///< Select DMA hardware trig 6
-    DmaUart0RxTrig                    = 40U,    ///< Select DMA hardware trig 8
-    DmaUart0TxTrig                    = 41U,    ///< Select DMA hardware trig 9             
-    DmaUart1RxTrig                    = 42U,    ///< Select DMA hardware trig 10
-    DmaUart1TxTrig                    = 43U,    ///< Select DMA hardware trig 11
-    DmaLpUart0RxTrig                  = 44U,    ///< Select DMA hardware trig 12
-    DmaLpUart0TxTrig                  = 45U,    ///< Select DMA hardware trig 13
-    DmaLpUart1RxTrig                  = 46U,    ///< Select DMA hardware trig 14
-    DmaLpUart1TxTrig                  = 47U,    ///< Select DMA hardware trig 15
-    DmaTIM0ATrig                      = 50U,    ///< Select DMA hardware trig 18
-    DmaTIM0BTrig                      = 51U,    ///< Select DMA hardware trig 19
-    DmaTIM1ATrig                      = 52U,    ///< Select DMA hardware trig 20
-    DmaTIM1BTrig                      = 53U,    ///< Select DMA hardware trig 21
-    DmaTIM2ATrig                      = 54U,    ///< Select DMA hardware trig 22   
-    DmaTIM2BTrig                      = 55U,    ///< Select DMA hardware trig 23   
-    DmaTIM3ATrig                      = 56U,    ///< Select DMA hardware trig 24    
-    DmaTIM3BTrig                      = 57U,    ///< Select DMA hardware trig 25   
-    DmaTIM4ATrig                      = 58U,    ///< Select DMA hardware trig 26    
-    DmaTIM4BTrig                      = 59U,    ///< Select DMA hardware trig 27   
-    DmaTIM5ATrig                      = 60U,    ///< Select DMA hardware trig 28    
-    DmaTIM5BTrig                      = 61U,    ///< Select DMA hardware trig 29   
-    DmaTIM6ATrig                      = 62U,    ///< Select DMA hardware trig 30    
-    DmaTIM6BTrig                      = 63U,    ///< Select DMA hardware trig 31   
-  }en_dma_trig_sel_t;  
 //-------------------------------------------------------------------------------------------------
 //uart0 DMA 传输
 //+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -81,10 +43,10 @@ static sdt_int32u rx_buff_addr_backup;
 //-------------------------------------------------------------------------------------------------
 void bsp_uart0_cfg(void)
 {
-    M0P_SYSCTRL->PERI_CLKEN_f.DMA = 1;
-    M0P_SYSCTRL->PERI_CLKEN_f.UART0 = 1;
-    M0P_SYSCTRL->PERI_CLKEN_f.BASETIM = 1;
-    M0P_SYSCTRL->PERI_CLKEN_f.GPIO = 1;
+    M0P_SYSCTRL->PERI_CLKEN0_f.DMA = 1;
+    M0P_SYSCTRL->PERI_CLKEN0_f.UART0 = 1;
+    M0P_SYSCTRL->PERI_CLKEN0_f.BASETIM = 1;
+    M0P_SYSCTRL->PERI_CLKEN0_f.GPIO = 1;
 //------------------------------------------------------------------------------
     //PB08 uart0_txd,PB09 uart0_rxd,TXEN  PA08,BY  PB07
     M0P_GPIO->PB08_SEL = 7;
@@ -118,7 +80,7 @@ void bsp_uart0_cfg(void)
 //------------------------------------------------------------------------------
     M0P_DMAC->CONF = 0x00000000;
     M0P_DMAC->CONFA0_f.ENS = 1;
-    M0P_DMAC->CONFA0_f.TRI_SEL = DmaUart0RxTrig;//DMA0 uart0_rx
+    M0P_DMAC->CONFA0_f.TRI_SEL = 0x48;//DMA0 uart0_rx
     M0P_DMAC->CONFA0_f.BC = 0;
     M0P_DMAC->CONFA0_f.TC = sizeof(dma_receive_buff) - 1;
     
@@ -139,7 +101,7 @@ void bsp_uart0_cfg(void)
 //------------------------------------------------------------------------------
     M0P_DMAC->CONF = 0x00000000;
     //M0P_DMAC->CONFA1_f.ENS = 1;
-    M0P_DMAC->CONFA1_f.TRI_SEL = DmaUart0TxTrig;//DMA0 uart0_tx
+    M0P_DMAC->CONFA1_f.TRI_SEL = 0x49;//DMA0 uart0_tx
     M0P_DMAC->CONFA1_f.BC = 0;
     M0P_DMAC->CONFA1_f.TC = 0;
 
@@ -165,7 +127,7 @@ void bsp_uart0_cfg(void)
     M0P_UART0->SCON_f.REN = 1;
     M0P_UART0->SCON_f.FEIE = 1; //帧错误中断
     M0P_UART0->SCNT = 156;  //24M -- 9600
-    EnableNvic(UART0_IRQn,IrqLevel3,TRUE);
+    EnableNvic(UART0_2_IRQn,IrqLevel3,TRUE);
 //------------------------------------------------------------------------------
     EnableNvic(DMAC_IRQn,IrqLevel3,TRUE);
 }
@@ -198,7 +160,7 @@ void TIM0_IRQHandler(void)
     }
 }
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-void UART0_IRQHandler(void)
+void UART0_2_IRQHandler(void)
 {
     if(1 == M0P_UART0->ISR_f.FE)
     {

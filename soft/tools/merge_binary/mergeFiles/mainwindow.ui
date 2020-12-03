@@ -183,6 +183,11 @@ p, li { white-space: pre-wrap; }
       <string>HC32L136K8TA</string>
      </property>
     </item>
+    <item>
+     <property name="text">
+      <string>HC32L176KATA</string>
+     </property>
+    </item>
    </widget>
    <widget class="QLabel" name="label_4">
     <property name="enabled">

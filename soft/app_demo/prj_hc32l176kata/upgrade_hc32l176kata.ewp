@@ -312,7 +312,7 @@
           <name>CCIncludePath2</name>
           <state>$PROJ_DIR$\</state>
           <state>$PROJ_DIR$\lib_hc32l17x\common\</state>
-          <state>$PROJ_DIR$\lib_hc32l17x\driver\</state>
+          <state>$PROJ_DIR$\lib_hc32l17x\driver\inc\</state>
         </option>
         <option>
           <name>CCStdIncCheck</name>
@@ -554,7 +554,7 @@
         </option>
         <option>
           <name>AOutputFile</name>
-          <state></state>
+          <state>$FILE_BNAME$.o</state>
         </option>
         <option>
           <name>AMultibyteSupport</name>
@@ -999,7 +999,7 @@
         </option>
         <option>
           <name>Input description</name>
-          <state></state>
+          <state>Automatic choice of formatter.</state>
         </option>
         <option>
           <name>Output variant</name>
@@ -1008,7 +1008,7 @@
         </option>
         <option>
           <name>Output description</name>
-          <state></state>
+          <state>Automatic choice of formatter.</state>
         </option>
         <option>
           <name>GOutputBinary</name>
@@ -1016,7 +1016,7 @@
         </option>
         <option>
           <name>OGCoreOrChip</name>
-          <state>0</state>
+          <state>1</state>
         </option>
         <option>
           <name>GRuntimeLibSelect</name>
@@ -1030,7 +1030,7 @@
         </option>
         <option>
           <name>RTDescription</name>
-          <state></state>
+          <state>Use the normal configuration of the C/C++ runtime library. No locale interface, C locale, no file descriptor support, no multibytes in printf and scanf, and no hex floats in strtod.</state>
         </option>
         <option>
           <name>OGProductVersion</name>
@@ -1038,7 +1038,7 @@
         </option>
         <option>
           <name>OGLastSavedByProductVersion</name>
-          <state></state>
+          <state>7.70.1.11471</state>
         </option>
         <option>
           <name>GeneralEnableMisra</name>
@@ -1050,15 +1050,15 @@
         </option>
         <option>
           <name>OGChipSelectEditMenu</name>
-          <state></state>
+          <state>HC32L176KATA	HDSC HC32L176KATA</state>
         </option>
         <option>
           <name>GenLowLevelInterface</name>
-          <state>0</state>
+          <state>1</state>
         </option>
         <option>
           <name>GEndianModeBE</name>
-          <state>0</state>
+          <state>1</state>
         </option>
         <option>
           <name>OGBufferedTerminalOutput</name>
@@ -1084,16 +1084,16 @@
         </option>
         <option>
           <name>RTConfigPath2</name>
-          <state></state>
+          <state>$TOOLKIT_DIR$\INC\c\DLib_Config_Normal.h</state>
         </option>
         <option>
           <name>GBECoreSlave</name>
           <version>24</version>
-          <state>38</state>
+          <state>35</state>
         </option>
         <option>
           <name>OGUseCmsis</name>
-          <state>0</state>
+          <state>1</state>
         </option>
         <option>
           <name>OGUseCmsisDspLib</name>
@@ -1106,11 +1106,11 @@
         <option>
           <name>CoreVariant</name>
           <version>24</version>
-          <state>38</state>
+          <state>35</state>
         </option>
         <option>
           <name>GFPUDeviceSlave</name>
-          <state>-</state>
+          <state>HC32L176KATA	HDSC HC32L176KATA</state>
         </option>
         <option>
           <name>FPU2</name>
@@ -1129,7 +1129,7 @@
         <option>
           <name>GFPUCoreSlave2</name>
           <version>24</version>
-          <state>38</state>
+          <state>35</state>
         </option>
       </data>
     </settings>
@@ -1255,7 +1255,7 @@
         </option>
         <option>
           <name>OutputFile</name>
-          <state></state>
+          <state>$FILE_BNAME$.o</state>
         </option>
         <option>
           <name>CCLibConfigHeader</name>
@@ -1271,7 +1271,9 @@
         </option>
         <option>
           <name>CCIncludePath2</name>
-          <state></state>
+          <state>$PROJ_DIR$\</state>
+          <state>$PROJ_DIR$\lib_hc32l17x\common\</state>
+          <state>$PROJ_DIR$\lib_hc32l17x\driver\inc\</state>
         </option>
         <option>
           <name>CCStdIncCheck</name>
@@ -1300,7 +1302,7 @@
         </option>
         <option>
           <name>CCOptLevelSlave</name>
-          <state>1</state>
+          <state>3</state>
         </option>
         <option>
           <name>CompilerMisraRules98</name>
@@ -1513,7 +1515,7 @@
         </option>
         <option>
           <name>AOutputFile</name>
-          <state></state>
+          <state>$FILE_BNAME$.o</state>
         </option>
         <option>
           <name>AMultibyteSupport</name>
@@ -1559,7 +1561,7 @@
         <option>
           <name>OOCOutputFormat</name>
           <version>3</version>
-          <state>0</state>
+          <state>3</state>
         </option>
         <option>
           <name>OCOutputOverride</name>
@@ -1567,7 +1569,7 @@
         </option>
         <option>
           <name>OOCOutputFile</name>
-          <state></state>
+          <state>upgrade_hc32l176kata.bin</state>
         </option>
         <option>
           <name>OOCCommandLineProducer</name>
@@ -1575,7 +1577,7 @@
         </option>
         <option>
           <name>OOCObjCopyEnable</name>
-          <state>0</state>
+          <state>1</state>
         </option>
       </data>
     </settings>
@@ -1622,7 +1624,7 @@
         </option>
         <option>
           <name>IlinkOutputFile</name>
-          <state>###Unitialized###</state>
+          <state>upgrade_hc32l176kata.out</state>
         </option>
         <option>
           <name>IlinkDebugInfoEnable</name>
@@ -1682,11 +1684,11 @@
         </option>
         <option>
           <name>IlinkIcfOverride</name>
-          <state>0</state>
+          <state>1</state>
         </option>
         <option>
           <name>IlinkIcfFile</name>
-          <state>lnk0t.icf</state>
+          <state>$PROJ_DIR$\app_hc32l17x.icf</state>
         </option>
         <option>
           <name>IlinkIcfFileSlave</name>
@@ -1746,7 +1748,7 @@
         </option>
         <option>
           <name>IlinkProgramEntryLabel</name>
-          <state></state>
+          <state>__iar_program_start</state>
         </option>
         <option>
           <name>DoFill</name>
@@ -2061,6 +2063,18 @@
     </group>
     <group>
       <name>pbc_lib</name>
+      <group>
+        <name>common</name>
+        <file>
+          <name>$PROJ_DIR$\lib_hc32l17x\common\interrupts_hc32l17x.c</name>
+        </file>
+        <file>
+          <name>$PROJ_DIR$\lib_hc32l17x\common\system_hc32l17x.c</name>
+        </file>
+      </group>
+      <file>
+        <name>$PROJ_DIR$\startup_hc32l17x.s</name>
+      </file>
     </group>
     <group>
       <name>pbc_sysTick</name>

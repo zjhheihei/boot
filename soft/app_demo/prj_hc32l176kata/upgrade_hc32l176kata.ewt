@@ -2453,6 +2453,18 @@
     </group>
     <group>
       <name>pbc_lib</name>
+      <group>
+        <name>common</name>
+        <file>
+          <name>$PROJ_DIR$\lib_hc32l17x\common\interrupts_hc32l17x.c</name>
+        </file>
+        <file>
+          <name>$PROJ_DIR$\lib_hc32l17x\common\system_hc32l17x.c</name>
+        </file>
+      </group>
+      <file>
+        <name>$PROJ_DIR$\startup_hc32l17x.s</name>
+      </file>
     </group>
     <group>
       <name>pbc_sysTick</name>

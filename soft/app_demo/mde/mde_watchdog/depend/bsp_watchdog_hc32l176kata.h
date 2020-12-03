@@ -1,6 +1,6 @@
 //+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 #include ".\snail_data_types.h"
-#include "hc32l13x.h"
+#include "hc32l17x.h"
 //+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 //+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -9,7 +9,7 @@
 void bsp_watchdog_cfg(void)
 {
     #ifdef NDEBUG
-    M0P_SYSCTRL->PERI_CLKEN_f.WDT = 1;
+    M0P_SYSCTRL->PERI_CLKEN0_f.WDT = 1;
     M0P_WDT->CON_f.WOV = 11u;
     M0P_WDT->CON_f.WINT_EN = 0;
     M0P_WDT->RST = 0x1E;

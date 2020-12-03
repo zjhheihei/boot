@@ -152,10 +152,10 @@ void HardFault_Handler(void)
  **
  ** \retval
  ******************************************************************************/
-void SysTick_Handler(void)
-{
-   SysTick_IRQHandler();
-}
+//void SysTick_Handler(void)
+//{
+//   SysTick_IRQHandler();
+//}
 
 /**
  *******************************************************************************
@@ -176,12 +176,12 @@ void PORTA_IRQHandler(void)
  ** 
  ** \retval
  ******************************************************************************/
-void PORTB_IRQHandler(void)
-{
-#if (INT_CALLBACK_ON == INT_CALLBACK_PORTB)    
-    PortB_IRQHandler();
-#endif    
-}
+//void PORTB_IRQHandler(void)
+//{
+//#if (INT_CALLBACK_ON == INT_CALLBACK_PORTB)    
+//    PortB_IRQHandler();
+//#endif    
+//}
 
 /**
  *******************************************************************************
@@ -223,12 +223,12 @@ void PORTD_F_IRQHandler(void)
  ** 
  ** \retval
  ******************************************************************************/
-void DMAC_IRQHandler(void)
-{
-#if (INT_CALLBACK_ON == INT_CALLBACK_DMAC)    
-    Dmac_IRQHandler();
-#endif    
-}
+//void DMAC_IRQHandler(void)
+//{
+//#if (INT_CALLBACK_ON == INT_CALLBACK_DMAC)    
+//    Dmac_IRQHandler();
+//#endif    
+//}
 
 /**
  *******************************************************************************
@@ -249,16 +249,16 @@ void TIM3_IRQHandler(void)
  ** 
  ** \retval
  ******************************************************************************/
-void UART0_2_IRQHandler(void)
-{
-#if (INT_CALLBACK_ON == INT_CALLBACK_UART0)    
-    Uart0_IRQHandler();
-#endif 
-    
-#if (INT_CALLBACK_ON == INT_CALLBACK_UART2)    
-    Uart2_IRQHandler();
-#endif
-}
+//void UART0_2_IRQHandler(void)
+//{
+//#if (INT_CALLBACK_ON == INT_CALLBACK_UART0)    
+//    Uart0_IRQHandler();
+//#endif 
+//    
+//#if (INT_CALLBACK_ON == INT_CALLBACK_UART2)    
+//    Uart2_IRQHandler();
+//#endif
+//}
 
 /**
  *******************************************************************************
@@ -361,12 +361,12 @@ void I2C1_IRQHandler(void)
  ** 
  ** \retval
  ******************************************************************************/
-void TIM0_IRQHandler(void)
-{
-#if (INT_CALLBACK_ON == INT_CALLBACK_TIM0)    
-    Tim0_IRQHandler();
-#endif
-}
+//void TIM0_IRQHandler(void)
+//{
+//#if (INT_CALLBACK_ON == INT_CALLBACK_TIM0)    
+//    Tim0_IRQHandler();
+//#endif
+//}
 
 /**
  *******************************************************************************

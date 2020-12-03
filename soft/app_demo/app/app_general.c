@@ -1,8 +1,8 @@
 //+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 #include ".\app_cfg.h"
 //+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-/*
-#include "hc32l13x.h"
+
+#include "hc32l17x.h"
 void gpio_test(void)
 {
     static sdt_bool cfg = sdt_false;
@@ -38,14 +38,14 @@ void gpio_test(void)
     else
     {
         cfg = sdt_true;
-        M0P_SYSCTRL->PERI_CLKEN_f.GPIO = 1;
+        M0P_SYSCTRL->PERI_CLKEN0_f.GPIO = 1;
         M0P_GPIO->PCDIR_f.PC13 = 0;       
         lighton = sdt_false;
     }
 
 
 }
-*/
+
 //+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 static void app_bough_demo(void)
 {
@@ -82,6 +82,7 @@ void app_general_task(void)
     //mde_IWDG_FeedDog();
     if(sys_cfged)
     {
+        gpio_test();
         mde_watchdog_reload();
         app_bough_demo();
         mde_random_task();

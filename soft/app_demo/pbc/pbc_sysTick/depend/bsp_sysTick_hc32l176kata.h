@@ -2,7 +2,7 @@
 #include ".\bsp_sysTick.h"
 #include ".\snail_data_types.h"
 #include "intrinsics.h"
-#include "hc32l13x.h"
+#include "hc32l17x.h"
 //+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 static sdt_int16u tick_millsecond;
 //+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++

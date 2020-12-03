@@ -109,7 +109,7 @@ extern "C"
 /******************************************************************************/
 /* User Device Setting Include file                                           */
 /******************************************************************************/
-#include "ddl_device.h"  // MUST be included here!
+//#include "ddl_device.h"  // MUST be included here!
 
 /******************************************************************************/
 /* Global type definitions ('typedef')                                        */
