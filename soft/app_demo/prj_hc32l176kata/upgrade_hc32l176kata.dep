@@ -159,13 +159,26 @@
       <file>$PROJ_DIR$\..\mde\mde_sys_clock\depend\bsp_system_clock.c</file>
       <file>$PROJ_DIR$\..\mde\mde_upgradeFiles\depend\bsp_upgradeFiles.c</file>
       <file>$PROJ_DIR$\..\mde\mde_watchdog\mde_watchdog.c</file>
+      <file>$PROJ_DIR$\..\mde\mde_led_blink\mde_led_blink.c</file>
+      <file>$PROJ_DIR$\..\mde\mde_led_blink\depend\bsp_led_blink_hc32l176kata.h</file>
+      <file>$PROJ_DIR$\..\mde\mde_led_blink\mde_led_blink.h</file>
+      <file>$PROJ_DIR$\..\mde\mde_led_blink\depend\bsp_led_blink.h</file>
+      <file>$PROJ_DIR$\..\mde\mde_led_blink\depend\bsp_led_blink.c</file>
+      <file>$PROJ_DIR$\..\mde\mde_led_blink\depend\snail_data_types.h</file>
+      <file>$PROJ_DIR$\Debug\Obj\bsp_led_blink.__cstat.et</file>
+      <file>$PROJ_DIR$\Debug\Obj\mde_led_blink.__cstat.et</file>
+      <file>$PROJ_DIR$\Debug\Obj\mde_led_blink.pbi</file>
+      <file>$PROJ_DIR$\Debug\Obj\mde_led_blink.o</file>
+      <file>$PROJ_DIR$\Debug\Obj\bsp_led_blink.o</file>
+      <file>$PROJ_DIR$\Debug\Obj\upgrade_hc32l176kata.pbd</file>
+      <file>$PROJ_DIR$\Debug\Obj\bsp_led_blink.pbi</file>
     </outputs>
     <file>
       <name>[ROOT_NODE]</name>
       <outputs>
         <tool>
           <name>ILINK</name>
-          <file> 94 82</file>
+          <file> 82 94</file>
         </tool>
       </outputs>
     </file>
@@ -230,7 +243,7 @@
       <inputs>
         <tool>
           <name>ILINK</name>
-          <file> 99 87 104 3 81 42 67 38 86 47 100 21 90 46 73 56 43 60 51 68 30 95 109 103 102</file>
+          <file> 99 87 104 3 163 81 42 67 38 86 47 100 21 162 90 46 73 56 43 60 51 68 30 95 109 103 102</file>
         </tool>
       </inputs>
     </file>
@@ -253,11 +266,11 @@
       <inputs>
         <tool>
           <name>BICOMP</name>
-          <file> 126 19 115 116 140 120 141 149 134 118 117</file>
+          <file> 126 19 115 116 140 120 141 149 155 134 118 117</file>
         </tool>
         <tool>
           <name>ICCARM</name>
-          <file> 120 19 116 126 140 115 141 149 134 118 117</file>
+          <file> 120 19 116 126 140 115 141 149 155 134 118 117</file>
         </tool>
       </inputs>
     </file>
@@ -307,11 +320,11 @@
       <inputs>
         <tool>
           <name>BICOMP</name>
-          <file> 141 32 1 116 117 18 140 134 24 29 19 126 115 149 118 93 14 7 33 120 23 6 11 8 54</file>
+          <file> 126 19 115 116 140 120 141 149 155 134 118 117</file>
         </tool>
         <tool>
           <name>ICCARM</name>
-          <file> 120 19 116 126 140 115 141 149 134 118 117 29 32 93 1 7 6 33 18 11 8 23 24 54 14</file>
+          <file> 120 19 116 126 140 115 141 149 155 134 118 117</file>
         </tool>
       </inputs>
     </file>
@@ -361,11 +374,11 @@
       <inputs>
         <tool>
           <name>BICOMP</name>
-          <file> 149 126 19 115 118 120 116 140 141 134 117</file>
+          <file> 126 117 149 19 115 134 120 116 140 141 155 118</file>
         </tool>
         <tool>
           <name>ICCARM</name>
-          <file> 120 19 116 126 140 115 141 149 134 118 117</file>
+          <file> 120 19 116 126 140 115 141 149 155 134 118 117</file>
         </tool>
       </inputs>
     </file>
@@ -756,10 +769,60 @@
         </tool>
       </inputs>
     </file>
-    <forcedrebuild>
-      <name>[MULTI_TOOL]</name>
-      <tool>ILINK</tool>
-    </forcedrebuild>
+    <file>
+      <name>$PROJ_DIR$\..\mde\mde_led_blink\mde_led_blink.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 161</file>
+        </tool>
+        <tool>
+          <name>ICCARM</name>
+          <file> 162</file>
+        </tool>
+        <tool>
+          <name>__cstat</name>
+          <file> 160</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 156 116 158</file>
+        </tool>
+        <tool>
+          <name>ICCARM</name>
+          <file> 158 116 156</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\mde\mde_led_blink\depend\bsp_led_blink.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 165</file>
+        </tool>
+        <tool>
+          <name>ICCARM</name>
+          <file> 163</file>
+        </tool>
+        <tool>
+          <name>__cstat</name>
+          <file> 159</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 93 1 18 29 24 158 154 32 14 7 33 80 23 6 11 8 54</file>
+        </tool>
+        <tool>
+          <name>ICCARM</name>
+          <file> 80 158 154 29 32 93 1 7 6 33 18 11 8 23 24 54 14</file>
+        </tool>
+      </inputs>
+    </file>
     <forcedrebuild>
       <name>$PROJ_DIR$\..\mde\mde_sys_clock\depend\bps_system_clock.c</name>
       <tool>ICCARM</tool>
@@ -1302,6 +1365,10 @@
         </tool>
       </outputs>
       <inputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 113 138 123 140 17</file>
+        </tool>
         <tool>
           <name>ICCARM</name>
           <file> 140 17 138 113 123</file>

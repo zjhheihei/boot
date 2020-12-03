@@ -15,6 +15,7 @@
 //reserve                    
 //0x0001 F000 -- 0x0001 FFFF     4k      8  page 
 //+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+static void write_into_flash(sdt_int32u* in_pFlash_addr,sdt_int32u in_ram_data)@".wr_flash";
 //+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 #define user_app_start_addr      0x00001000
 #define user_upgrade_start_addr  0x00010000
@@ -74,7 +75,8 @@ void bsp_write_block_user_upgrade(sdt_int16u in_block_num,sdt_int8u* in_pBuff)
             M0P_FLASH->CR_f.OP = 0x02;       //sector erase
         }while(0x02 != M0P_FLASH->CR_f.OP);
 
-        *((sdt_int8u*)falsh_addr) = 0x00;   //Erase  page
+        //*((sdt_int8u*)falsh_addr) = 0x00;   //Erase  page
+        write_into_flash((sdt_int32u*)falsh_addr,0);
         while(0 != M0P_FLASH->CR_f.BUSY)
         {
         }
@@ -92,7 +94,8 @@ void bsp_write_block_user_upgrade(sdt_int16u in_block_num,sdt_int8u* in_pBuff)
         inf_addr = user_upgrade_inf_addr;
         for(i = 0;i < 8;i++)
         {
-            *(sdt_int32u*)inf_addr = inf_backup[i];
+            // *(sdt_int32u*)inf_addr = inf_backup[i];
+            write_into_flash((sdt_int32u*)inf_addr,inf_backup[i]);
             inf_addr += 4;
             while(0 != M0P_FLASH->CR_f.BUSY)
             {
@@ -122,7 +125,8 @@ void bsp_write_block_user_upgrade(sdt_int16u in_block_num,sdt_int8u* in_pBuff)
         M0P_WDT->RST = 0xE1; 
         #endif
         
-        *(sdt_int32u*)falsh_addr = inf_data.inf_32bits[i];
+        //*(sdt_int32u*)falsh_addr = inf_data.inf_32bits[i];
+        write_into_flash((sdt_int32u*)falsh_addr,inf_data.inf_32bits[i]);
         while(0 != M0P_FLASH->CR_f.BUSY)
         {
         }
@@ -178,7 +182,8 @@ void bsp_write_information_user_upgrade(sdt_int8u* in_pBuff)
     }while(0x02 != M0P_FLASH->CR_f.OP);
 
     falsh_addr = user_upgrade_inf_page;
-    *((sdt_int8u*)falsh_addr) = 0x00;   //Erase inf page
+    //*((sdt_int8u*)falsh_addr) = 0x00;   //Erase inf page
+    write_into_flash((sdt_int32u*)falsh_addr,0);
     while(0 != M0P_FLASH->CR_f.BUSY)
     {
     }
@@ -199,7 +204,8 @@ void bsp_write_information_user_upgrade(sdt_int8u* in_pBuff)
         M0P_WDT->RST = 0xE1; 
         #endif
         
-        *(sdt_int32u*)falsh_addr = backup[i];
+        //*(sdt_int32u*)falsh_addr = backup[i];
+        write_into_flash((sdt_int32u*)falsh_addr,backup[i]);
         while(0 != M0P_FLASH->CR_f.BUSY)
         {
         }
@@ -231,11 +237,17 @@ void bsp_write_information_user_upgrade(sdt_int8u* in_pBuff)
         M0P_WDT->RST = 0xE1; 
         #endif
         
-        *(sdt_int32u*)upgrade_falsh_addr = inf_data.inf_32bits[i];
+        //*(sdt_int32u*)upgrade_falsh_addr = inf_data.inf_32bits[i];
+        write_into_flash((sdt_int32u*)upgrade_falsh_addr,inf_data.inf_32bits[i]);
         while(0 != M0P_FLASH->CR_f.BUSY)
         {
         }
         upgrade_falsh_addr += 4;
     }
+}
+//+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+static void write_into_flash(sdt_int32u* in_pFlash_addr,sdt_int32u in_ram_data)@".wr_flash"
+{
+    *in_pFlash_addr = in_ram_data;
 }
 //+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
