@@ -1,5 +1,5 @@
 //+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-#include ".\depend\bps_system_clock.h"
+#include ".\depend\bsp_system_clock.h"
 #include ".\mde_system_clock.h"
 //-----------------------------------------------------------------------------
 void mde_systemClock_cfg(void)

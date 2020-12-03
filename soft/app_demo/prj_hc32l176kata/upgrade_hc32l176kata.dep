@@ -2,7 +2,7 @@
 
 <project>
   <fileVersion>2</fileVersion>
-  <fileChecksum>1991732854</fileChecksum>
+  <fileChecksum>996739386</fileChecksum>
   <configuration>
     <name>Debug</name>
     <outputs>
@@ -52,6 +52,28 @@
       <file>$PROJ_DIR$\..\pbc\pbc_crc16\depend\snail_data_types.h</file>
       <file>$PROJ_DIR$\..\mde\mde_watchdog\depend\bps_watchdog.h</file>
       <file>$PROJ_DIR$\Debug\Obj\pbc_crc16.pbi</file>
+      <file>$PROJ_DIR$\Debug\Obj\bsp_random.__cstat.et</file>
+      <file>$PROJ_DIR$\Debug\Obj\mde_random.__cstat.et</file>
+      <file>$PROJ_DIR$\Debug\Obj\bps_system_clock.__cstat.et</file>
+      <file>$PROJ_DIR$\Debug\Obj\mde_system_clock.__cstat.et</file>
+      <file>$PROJ_DIR$\Debug\Obj\bsp_upgradeFiles.__cstat.et</file>
+      <file>$PROJ_DIR$\Debug\Obj\mde_bough_link_half.__cstat.et</file>
+      <file>$PROJ_DIR$\Debug\Obj\mde_upgradeFiles.__cstat.et</file>
+      <file>$PROJ_DIR$\Debug\Obj\app_general.__cstat.et</file>
+      <file>$PROJ_DIR$\Debug\Obj\app_upgrade_easy.__cstat.et</file>
+      <file>$PROJ_DIR$\Debug\Obj\main.__cstat.et</file>
+      <file>$PROJ_DIR$\Debug\Obj\bsp_bough_link.__cstat.et</file>
+      <file>$PROJ_DIR$\Debug\Obj\pbc_crc16.__cstat.et</file>
+      <file>$PROJ_DIR$\Debug\Obj\pbc_sysTick.__cstat.et</file>
+      <file>$PROJ_DIR$\Debug\Obj\bps_watchdog.__cstat.et</file>
+      <file>$PROJ_DIR$\Debug\Obj\mde_watchdog.__cstat.et</file>
+      <file>$PROJ_DIR$\Debug\Obj\pbc_dataConvert.__cstat.et</file>
+      <file>$PROJ_DIR$\Debug\Obj\bsp_sysTick.__cstat.et</file>
+      <file>$PROJ_DIR$\..\mde\mde_sys_clock\depend\bsp_system_clock_hc32l176kata.h</file>
+      <file>$PROJ_DIR$\..\mde\mde_random\depend\bsp_random_hc32l176kata.h</file>
+      <file>$PROJ_DIR$\..\mde\mde_watchdog\depend\bsp_watchdog.c</file>
+      <file>$PROJ_DIR$\..\mde\mde_upgradeFiles\depend\bsp_upgradeFiles_hc32l176kata.h</file>
+      <file>$PROJ_DIR$\..\mde\mde_watchdog\depend\bsp_watchdog.h</file>
       <file>$PROJ_DIR$\Debug\Obj\bsp_sysTick.o</file>
       <file>$PROJ_DIR$\..\pbc\pbc_dataConvert\depend\snail_data_types.h</file>
       <file>$PROJ_DIR$\Debug\Obj\pbc_dataConvert.o</file>
@@ -59,11 +81,17 @@
       <file>$PROJ_DIR$\Debug\Obj\pbc_dataConvert.pbi</file>
       <file>$PROJ_DIR$\..\mde\mde_watchdog\depend\bps_watchdog.c</file>
       <file>$PROJ_DIR$\Debug\Exe\upgrade_hc32l176kata.out</file>
+      <file>$PROJ_DIR$\..\mde\mde_sys_clock\depend\bsp_system_clock.h</file>
       <file>$PROJ_DIR$\..\mde\mde_watchdog\mde_watchdog.c</file>
       <file>$PROJ_DIR$\..\mde\mde_random\mde_random.c</file>
       <file>$PROJ_DIR$\..\mde\mde_upgradeFiles\depend\bsp_upgradeFiles.c</file>
+      <file>$PROJ_DIR$\Debug\Obj\bsp_system_clock.o</file>
+      <file>$PROJ_DIR$\Debug\Obj\bsp_system_clock.pbi</file>
       <file>$PROJ_DIR$\..\mde\mde_upgradeFiles\mde_upgradeFiles.c</file>
       <file>$PROJ_DIR$\..\pbc\pbc_crc16\pbc_crc16.c</file>
+      <file>$PROJ_DIR$\..\mde\mde_sys_clock\depend\bsp_system_clock.c</file>
+      <file>$PROJ_DIR$\..\mde\mde_bough_link\depend\bsp_bough_link_hc32l176kata.h</file>
+      <file>$PROJ_DIR$\chip_select.h</file>
       <file>$PROJ_DIR$\..\mde\mde_random\mde_random.h</file>
       <file>$PROJ_DIR$\..\mde\mde_watchdog\mde_watchdog.h</file>
       <file>$PROJ_DIR$\..\mde\mde_bough_link\mde_bough_link_half.c</file>
@@ -74,6 +102,7 @@
       <file>$PROJ_DIR$\..\mde\mde_bough_link\solid_bough_link_half.h</file>
       <file>$PROJ_DIR$\Debug\Obj\mde_system_clock.o</file>
       <file>$PROJ_DIR$\Debug\Obj\mde_system_clock.pbi</file>
+      <file>$PROJ_DIR$\..\mde\mde_watchdog\depend\bsp_watchdog_hc32l176kata.h</file>
       <file>$PROJ_DIR$\..\pbc\pbc_sysTick\pbc_sysTick.c</file>
       <file>$PROJ_DIR$\..\mde\mde_sys_clock\depend\bps_system_clock.c</file>
       <file>$PROJ_DIR$\Debug\Obj\pbc_sysTick.pbi</file>
@@ -84,17 +113,20 @@
       <file>$PROJ_DIR$\Debug\Obj\mde_random.o</file>
       <file>$PROJ_DIR$\Debug\Obj\mde_random.pbi</file>
       <file>$PROJ_DIR$\..\mde\mde_random\depend\snail_data_types.h</file>
+      <file>$PROJ_DIR$\..\pbc\pbc_sysTick\depend\bsp_sysTick_hc32l176kata.h</file>
       <file>$PROJ_DIR$\Debug\Obj\bps_system_clock.pbi</file>
       <file>$PROJ_DIR$\Debug\Obj\bps_system_clock.o</file>
       <file>$PROJ_DIR$\..\mde\mde_bough_link\depend\bsp_bough_link.c</file>
       <file>$PROJ_DIR$\..\pbc\pbc_sysTick\depend\bsp_sysTick.c</file>
+      <file>$PROJ_DIR$\Debug\Obj\bsp_watchdog.o</file>
+      <file>$PROJ_DIR$\Debug\Obj\bsp_watchdog.pbi</file>
     </outputs>
     <file>
       <name>[ROOT_NODE]</name>
       <outputs>
         <tool>
           <name>ILINK</name>
-          <file> 52</file>
+          <file> 74</file>
         </tool>
       </outputs>
     </file>
@@ -109,15 +141,19 @@
           <name>ICCARM</name>
           <file> 27</file>
         </tool>
+        <tool>
+          <name>__cstat</name>
+          <file> 53</file>
+        </tool>
       </outputs>
       <inputs>
         <tool>
           <name>BICOMP</name>
-          <file> 16 18 17 19 20 22 21 58 59 28 24</file>
+          <file> 16 18 17 19 20 22 21 86 87 28 24</file>
         </tool>
         <tool>
           <name>ICCARM</name>
-          <file> 22 18 19 16 20 17 21 58 59 28 24</file>
+          <file> 22 18 19 16 20 17 21 86 87 28 24</file>
         </tool>
       </inputs>
     </file>
@@ -132,15 +168,19 @@
           <name>ICCARM</name>
           <file> 29</file>
         </tool>
+        <tool>
+          <name>__cstat</name>
+          <file> 54</file>
+        </tool>
       </outputs>
       <inputs>
         <tool>
           <name>BICOMP</name>
-          <file> 58 16 18 17 28 22 19 20 21 59 24</file>
+          <file> 86 16 18 17 28 22 19 20 21 87 24</file>
         </tool>
         <tool>
           <name>ICCARM</name>
-          <file> 22 18 19 16 20 17 21 58 59 28 24</file>
+          <file> 22 18 19 16 20 17 21 86 87 28 24</file>
         </tool>
       </inputs>
     </file>
@@ -155,15 +195,19 @@
           <name>ICCARM</name>
           <file> 12</file>
         </tool>
+        <tool>
+          <name>__cstat</name>
+          <file> 55</file>
+        </tool>
       </outputs>
       <inputs>
         <tool>
           <name>BICOMP</name>
-          <file> 16 18 17 19 20 22 21 58 59 28 24</file>
+          <file> 16 18 17 19 20 22 21 86 87 28 24</file>
         </tool>
         <tool>
           <name>ICCARM</name>
-          <file> 22 18 19 16 20 17 21 58 59 28 24</file>
+          <file> 22 18 19 16 20 17 21 86 87 28 24</file>
         </tool>
       </inputs>
     </file>
@@ -178,11 +222,19 @@
           <name>ICCARM</name>
           <file> 2</file>
         </tool>
+        <tool>
+          <name>__cstat</name>
+          <file> 46</file>
+        </tool>
       </outputs>
       <inputs>
         <tool>
           <name>BICOMP</name>
-          <file> 77</file>
+          <file> 106 64 85</file>
+        </tool>
+        <tool>
+          <name>ICCARM</name>
+          <file> 85 106 64</file>
         </tool>
       </inputs>
     </file>
@@ -191,17 +243,25 @@
       <outputs>
         <tool>
           <name>BICOMP</name>
-          <file> 67</file>
+          <file> 95</file>
         </tool>
         <tool>
           <name>ICCARM</name>
-          <file> 66</file>
+          <file> 94</file>
+        </tool>
+        <tool>
+          <name>__cstat</name>
+          <file> 49</file>
         </tool>
       </outputs>
       <inputs>
         <tool>
           <name>BICOMP</name>
-          <file> 38 20 39</file>
+          <file> 75 20 39</file>
+        </tool>
+        <tool>
+          <name>ICCARM</name>
+          <file> 75 20 39</file>
         </tool>
       </inputs>
     </file>
@@ -210,17 +270,44 @@
       <outputs>
         <tool>
           <name>BICOMP</name>
-          <file> 50</file>
+          <file> 72</file>
         </tool>
         <tool>
           <name>ICCARM</name>
-          <file> 48</file>
+          <file> 70</file>
+        </tool>
+        <tool>
+          <name>__cstat</name>
+          <file> 61</file>
         </tool>
       </outputs>
       <inputs>
         <tool>
           <name>BICOMP</name>
-          <file> 47</file>
+          <file> 69</file>
+        </tool>
+        <tool>
+          <name>ICCARM</name>
+          <file> 69</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\mde\mde_watchdog\depend\bsp_watchdog.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 113</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 85 1 96</file>
+        </tool>
+        <tool>
+          <name>ICCARM</name>
+          <file> 85 1 96</file>
         </tool>
       </inputs>
     </file>
@@ -235,10 +322,18 @@
           <name>ICCARM</name>
           <file> 3</file>
         </tool>
+        <tool>
+          <name>__cstat</name>
+          <file> 59</file>
+        </tool>
       </outputs>
       <inputs>
         <tool>
           <name>BICOMP</name>
+          <file> 1</file>
+        </tool>
+        <tool>
+          <name>ICCARM</name>
           <file> 1</file>
         </tool>
       </inputs>
@@ -254,10 +349,18 @@
           <name>ICCARM</name>
           <file> 6</file>
         </tool>
+        <tool>
+          <name>__cstat</name>
+          <file> 60</file>
+        </tool>
       </outputs>
       <inputs>
         <tool>
           <name>BICOMP</name>
+          <file> 44</file>
+        </tool>
+        <tool>
+          <name>ICCARM</name>
           <file> 44</file>
         </tool>
       </inputs>
@@ -267,17 +370,25 @@
       <outputs>
         <tool>
           <name>BICOMP</name>
-          <file> 76</file>
+          <file> 105</file>
         </tool>
         <tool>
           <name>ICCARM</name>
-          <file> 75</file>
+          <file> 104</file>
+        </tool>
+        <tool>
+          <name>__cstat</name>
+          <file> 47</file>
         </tool>
       </outputs>
       <inputs>
         <tool>
           <name>BICOMP</name>
-          <file> 77 74</file>
+          <file> 106 103</file>
+        </tool>
+        <tool>
+          <name>ICCARM</name>
+          <file> 106 103</file>
         </tool>
       </inputs>
     </file>
@@ -292,11 +403,19 @@
           <name>ICCARM</name>
           <file> 33</file>
         </tool>
+        <tool>
+          <name>__cstat</name>
+          <file> 50</file>
+        </tool>
       </outputs>
       <inputs>
         <tool>
           <name>BICOMP</name>
-          <file> 64</file>
+          <file> 92 66 85</file>
+        </tool>
+        <tool>
+          <name>ICCARM</name>
+          <file> 85 92 66</file>
         </tool>
       </inputs>
     </file>
@@ -305,17 +424,25 @@
       <outputs>
         <tool>
           <name>BICOMP</name>
-          <file> 63</file>
+          <file> 91</file>
         </tool>
         <tool>
           <name>ICCARM</name>
-          <file> 61</file>
+          <file> 89</file>
+        </tool>
+        <tool>
+          <name>__cstat</name>
+          <file> 52</file>
         </tool>
       </outputs>
       <inputs>
         <tool>
           <name>BICOMP</name>
-          <file> 19 21 16 62 64</file>
+          <file> 19 21 16 90 92</file>
+        </tool>
+        <tool>
+          <name>ICCARM</name>
+          <file> 90 92 21 19 16</file>
         </tool>
       </inputs>
     </file>
@@ -330,11 +457,42 @@
           <name>ICCARM</name>
           <file> 42</file>
         </tool>
+        <tool>
+          <name>__cstat</name>
+          <file> 57</file>
+        </tool>
       </outputs>
       <inputs>
         <tool>
           <name>BICOMP</name>
           <file> 43</file>
+        </tool>
+        <tool>
+          <name>ICCARM</name>
+          <file> 43</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\mde\mde_sys_clock\depend\bsp_system_clock.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 80</file>
+        </tool>
+        <tool>
+          <name>ICCARM</name>
+          <file> 79</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 39 63 85</file>
+        </tool>
+        <tool>
+          <name>ICCARM</name>
+          <file> 85 39 63</file>
         </tool>
       </inputs>
     </file>
@@ -349,11 +507,19 @@
           <name>ICCARM</name>
           <file> 37</file>
         </tool>
+        <tool>
+          <name>__cstat</name>
+          <file> 51</file>
+        </tool>
       </outputs>
       <inputs>
         <tool>
           <name>BICOMP</name>
-          <file> 36 19 17 20 65 32 30</file>
+          <file> 36 19 17 20 93 32 30</file>
+        </tool>
+        <tool>
+          <name>ICCARM</name>
+          <file> 32 30 17 19 20 36 93</file>
         </tool>
       </inputs>
     </file>
@@ -362,17 +528,25 @@
       <outputs>
         <tool>
           <name>BICOMP</name>
-          <file> 70</file>
+          <file> 99</file>
         </tool>
         <tool>
           <name>ICCARM</name>
-          <file> 71</file>
+          <file> 100</file>
+        </tool>
+        <tool>
+          <name>__cstat</name>
+          <file> 58</file>
         </tool>
       </outputs>
       <inputs>
         <tool>
           <name>BICOMP</name>
-          <file> 19 73 72</file>
+          <file> 19 102 101</file>
+        </tool>
+        <tool>
+          <name>ICCARM</name>
+          <file> 101 102 19</file>
         </tool>
       </inputs>
     </file>
@@ -381,17 +555,21 @@
       <outputs>
         <tool>
           <name>BICOMP</name>
-          <file> 78</file>
+          <file> 108</file>
         </tool>
         <tool>
-          <name>ICCARM</name>
-          <file> 79</file>
+          <name>__cstat</name>
+          <file> 48</file>
         </tool>
       </outputs>
       <inputs>
         <tool>
           <name>BICOMP</name>
-          <file> 39</file>
+          <file> 85 39</file>
+        </tool>
+        <tool>
+          <name>ICCARM</name>
+          <file> 85 39</file>
         </tool>
       </inputs>
     </file>
@@ -406,11 +584,19 @@
           <name>ICCARM</name>
           <file> 9</file>
         </tool>
+        <tool>
+          <name>__cstat</name>
+          <file> 56</file>
+        </tool>
       </outputs>
       <inputs>
         <tool>
           <name>BICOMP</name>
-          <file> 10 17 8 30</file>
+          <file> 10 30 84 17 8 85</file>
+        </tool>
+        <tool>
+          <name>ICCARM</name>
+          <file> 85 30 84 17</file>
         </tool>
       </inputs>
     </file>
@@ -419,23 +605,51 @@
       <outputs>
         <tool>
           <name>BICOMP</name>
-          <file> 49</file>
+          <file> 71</file>
         </tool>
         <tool>
-          <name>ICCARM</name>
-          <file> 46</file>
+          <name>__cstat</name>
+          <file> 62</file>
         </tool>
       </outputs>
       <inputs>
         <tool>
           <name>BICOMP</name>
-          <file> 73 8 10 72</file>
+          <file> 102 107 101 8 10 85</file>
+        </tool>
+        <tool>
+          <name>ICCARM</name>
+          <file> 85 102 107 101 8 10</file>
         </tool>
       </inputs>
     </file>
     <forcedrebuild>
       <name>[MULTI_TOOL]</name>
       <tool>ILINK</tool>
+    </forcedrebuild>
+    <forcedrebuild>
+      <name>$PROJ_DIR$\..\mde\mde_random\depend\bsp_random.c</name>
+      <tool>ICCARM</tool>
+    </forcedrebuild>
+    <forcedrebuild>
+      <name>$PROJ_DIR$\..\mde\mde_watchdog\depend\bps_watchdog.c</name>
+      <tool>ICCARM</tool>
+    </forcedrebuild>
+    <forcedrebuild>
+      <name>$PROJ_DIR$\..\mde\mde_upgradeFiles\depend\bsp_upgradeFiles.c</name>
+      <tool>ICCARM</tool>
+    </forcedrebuild>
+    <forcedrebuild>
+      <name>$PROJ_DIR$\..\mde\mde_sys_clock\depend\bps_system_clock.c</name>
+      <tool>ICCARM</tool>
+    </forcedrebuild>
+    <forcedrebuild>
+      <name>$PROJ_DIR$\..\mde\mde_bough_link\depend\bsp_bough_link.c</name>
+      <tool>ICCARM</tool>
+    </forcedrebuild>
+    <forcedrebuild>
+      <name>$PROJ_DIR$\..\pbc\pbc_sysTick\depend\bsp_sysTick.c</name>
+      <tool>ICCARM</tool>
     </forcedrebuild>
     <forcedrebuild>
       <name>[REBUILD_ALL]</name>

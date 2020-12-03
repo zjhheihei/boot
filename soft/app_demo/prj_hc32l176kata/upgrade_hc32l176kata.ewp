@@ -310,7 +310,9 @@
         </option>
         <option>
           <name>CCIncludePath2</name>
-          <state></state>
+          <state>$PROJ_DIR$\</state>
+          <state>$PROJ_DIR$\lib_hc32l17x\common\</state>
+          <state>$PROJ_DIR$\lib_hc32l17x\driver\</state>
         </option>
         <option>
           <name>CCStdIncCheck</name>
@@ -1987,10 +1989,10 @@
       <group>
         <name>depend</name>
         <file>
-          <name>$PROJ_DIR$\..\mde\mde_sys_clock\depend\bps_system_clock.c</name>
+          <name>$PROJ_DIR$\..\mde\mde_sys_clock\depend\bsp_system_clock.c</name>
         </file>
         <file>
-          <name>$PROJ_DIR$\..\mde\mde_sys_clock\depend\bps_system_clock.h</name>
+          <name>$PROJ_DIR$\..\mde\mde_sys_clock\depend\bsp_system_clock.h</name>
         </file>
       </group>
       <file>
@@ -2023,10 +2025,10 @@
       <group>
         <name>depend</name>
         <file>
-          <name>$PROJ_DIR$\..\mde\mde_watchdog\depend\bps_watchdog.c</name>
+          <name>$PROJ_DIR$\..\mde\mde_watchdog\depend\bsp_watchdog.c</name>
         </file>
         <file>
-          <name>$PROJ_DIR$\..\mde\mde_watchdog\depend\bps_watchdog.h</name>
+          <name>$PROJ_DIR$\..\mde\mde_watchdog\depend\bsp_watchdog.h</name>
         </file>
       </group>
       <file>

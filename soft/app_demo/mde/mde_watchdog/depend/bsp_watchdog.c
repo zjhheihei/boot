@@ -10,8 +10,8 @@
 #elif defined(stm8l052r8t6)
 
 #elif defined(hc32l136k8ta)
-#include ".\bsp_system_clock_hc32l136k8ta.h"
+#include ".\bsp_watchdog_hc32l136k8ta.h"
 #elif defined(hc32l176kata)
-#include ".\bsp_system_clock_hc32l176kata.h"
+#include ".\bsp_watchdog_hc32l176kata.h"
 #endif
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++

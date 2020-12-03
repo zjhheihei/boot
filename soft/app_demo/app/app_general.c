@@ -1,7 +1,7 @@
 //+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 #include ".\app_cfg.h"
 //+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-
+/*
 #include "hc32l13x.h"
 void gpio_test(void)
 {
@@ -45,6 +45,7 @@ void gpio_test(void)
 
 
 }
+*/
 //+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 static void app_bough_demo(void)
 {
@@ -82,7 +83,6 @@ void app_general_task(void)
     if(sys_cfged)
     {
         mde_watchdog_reload();
-        gpio_test();
         app_bough_demo();
         mde_random_task();
 //        mde_hc595_task();    
