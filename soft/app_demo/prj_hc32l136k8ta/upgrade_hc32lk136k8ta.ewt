@@ -2462,6 +2462,9 @@
           <name>$PROJ_DIR$\..\pbc\pbc_hc32Lib\common\system_hc32l13x.c</name>
         </file>
       </group>
+      <file>
+        <name>$PROJ_DIR$\startup_hc32l13x.s</name>
+      </file>
     </group>
     <group>
       <name>pbc_sysTick</name>

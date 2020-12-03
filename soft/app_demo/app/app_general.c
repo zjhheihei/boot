@@ -50,9 +50,7 @@ static void app_bough_demo(void)
 {
     mde_bough_link_task();
     app_upgrade_easy_task();
-    macro_createTimer(timer_transmit,timerType_millisecond,0);
     
-    pbc_timerClockRun_task(&timer_transmit);
 
     if(pull_bough_recevie_one_message(0))
     {
@@ -60,7 +58,7 @@ static void app_bough_demo(void)
         bgk_comm_buff_def* p_rx_bgk_buff;
         
         p_rx_bgk_buff = pull_bough_message_pBuff(0);
-        switch(BGPTCL_EasyUpagrde == p_rx_bgk_buff->ProcotolType)
+        switch(p_rx_bgk_buff->ProcotolType)
         {
             case BGPTCL_EasyUpagrde:
             {
