@@ -8,6 +8,6 @@ void mde_systemClock_cfg(void)
 }
 sdt_int32u mde_pull_hisFrequency(void)
 {
-    return(72000000);
+    return(24000000);
 }
 //+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++

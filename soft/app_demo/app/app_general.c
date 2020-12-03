@@ -1,36 +1,7 @@
 //+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 #include ".\app_cfg.h"
 //+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-//bool digitIn1,digitIn2,digitIn3,digitIn4;
-//
-//void app_digit_input_task(void)
-//{
-//    digitIn1 = mde_gigit_pull_status(DIGITIN_1);
-//    digitIn2 = mde_gigit_pull_status(DIGITIN_2);
-//    digitIn3 = mde_gigit_pull_status(DIGITIN_3);
-//    digitIn4 = mde_gigit_pull_status(DIGITIN_4);
-//}
 
-//void app_setpmotor_task(void)
-//{
-//    static bool cfged = false;
-//    macro_createTimer(measure_delay,timerType_millisecond,0);
-//    pbc_timerClockRun_task(&measure_delay);
-//    if(pbc_pull_timerIsCompleted(&measure_delay))
-//    {
-//        pbc_reload_timerClock(&measure_delay,15000);
-//        if(cfged)
-//        {
-//            cfged = false;
-//            mde_FirstMotor_GotoOpen();
-//        }
-//        else
-//        {
-//            cfged = true;
-//            mde_FirstMotor_GotoClose();
-//        }
-//    }
-//}
 #include "hc32l13x.h"
 void gpio_test(void)
 {
@@ -72,11 +43,7 @@ void gpio_test(void)
         lighton = sdt_false;
     }
 
-//    volatile sdt_int32u i;
-//    for(i=0;i < 500000;i++);
-//    M0P_GPIO->PCOUT_f.PC13 = 0;
-//    for(i=0;i < 500000;i++);
-//    M0P_GPIO->PCOUT_f.PC13 = 1;    
+
 }
 //+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 static void app_bough_demo(void)
@@ -89,82 +56,21 @@ static void app_bough_demo(void)
 
     if(pull_bough_recevie_one_message(0))
     {
-        sdt_int8u local_addr[6];
+        sdt_int8u local_addr[6] ={0x98,0x73,0x83,0x19,0x53,0x43};
         bgk_comm_buff_def* p_rx_bgk_buff;
+        
         p_rx_bgk_buff = pull_bough_message_pBuff(0);
-        Bough_EasyUpgrade_Protocol(p_rx_bgk_buff,&local_addr[0]);
-      /*
-            static sdt_int16u length = 1;
-            bgk_comm_buff_def* p_tx_bgk_buff;
-            
-            p_tx_bgk_buff = pull_bough_message_pBuff(0);
-            p_tx_bgk_buff->LinkSrcAddr[0] = 0xee;
-            p_tx_bgk_buff->LinkSrcAddr[1] = 0xee;
-            p_tx_bgk_buff->LinkSrcAddr[2] = 0xee;
-            p_tx_bgk_buff->LinkSrcAddr[3] = 0xee;
-            p_tx_bgk_buff->LinkSrcAddr[4] = 0xee;
-            p_tx_bgk_buff->LinkSrcAddr[5] = 0xee;
-            
-            p_tx_bgk_buff->LinkDstAddr[0] = 0xdd;
-            p_tx_bgk_buff->LinkDstAddr[1] = 0xdd;
-            p_tx_bgk_buff->LinkDstAddr[2] = 0xdd;
-            p_tx_bgk_buff->LinkDstAddr[3] = 0xdd;
-            p_tx_bgk_buff->LinkDstAddr[4] = 0xdd;
-            p_tx_bgk_buff->LinkDstAddr[5] = 0xdd;     
-            p_tx_bgk_buff->ProcotolType = 0xc000;
-            p_tx_bgk_buff->PayloadLength = length;
-            p_tx_bgk_buff->Payload[0] = 0x00;
-            p_tx_bgk_buff->Payload[1] = 0x01;
-            p_tx_bgk_buff->Payload[2] = 0x02;
-            p_tx_bgk_buff->Payload[3] = 0x03;
-            p_tx_bgk_buff->Payload[4] = 0x04;
-            p_tx_bgk_buff->Payload[5] = 0x05;
-            p_tx_bgk_buff->Payload[6] = 0x06;
-            p_tx_bgk_buff->Payload[7] = 0x07;
-            p_tx_bgk_buff->Payload[8] = 0x08;
-            p_tx_bgk_buff->Payload[9] = 0x09;
-            push_active_one_message_transmit(0,sdt_false);
-            length ++;
-      */
-    }
-    else
-    {
-        if(pbc_pull_timerIsCompleted(&timer_transmit))
+        switch(BGPTCL_EasyUpagrde == p_rx_bgk_buff->ProcotolType)
         {
-            pbc_reload_timerClock(&timer_transmit,1000);
-            /*
-            static sdt_int16u length = 1;
-            bgk_comm_buff_def* p_tx_bgk_buff;
-            
-            p_tx_bgk_buff = pull_bough_message_pBuff(0);
-            p_tx_bgk_buff->LinkSrcAddr[0] = 0xee;
-            p_tx_bgk_buff->LinkSrcAddr[1] = 0xee;
-            p_tx_bgk_buff->LinkSrcAddr[2] = 0xee;
-            p_tx_bgk_buff->LinkSrcAddr[3] = 0xee;
-            p_tx_bgk_buff->LinkSrcAddr[4] = 0xee;
-            p_tx_bgk_buff->LinkSrcAddr[5] = 0xee;
-            
-            p_tx_bgk_buff->LinkDstAddr[0] = 0xdd;
-            p_tx_bgk_buff->LinkDstAddr[1] = 0xdd;
-            p_tx_bgk_buff->LinkDstAddr[2] = 0xdd;
-            p_tx_bgk_buff->LinkDstAddr[3] = 0xdd;
-            p_tx_bgk_buff->LinkDstAddr[4] = 0xdd;
-            p_tx_bgk_buff->LinkDstAddr[5] = 0xdd;     
-            p_tx_bgk_buff->ProcotolType = 0xc000;
-            p_tx_bgk_buff->PayloadLength = length;
-            p_tx_bgk_buff->Payload[0] = 0x00;
-            p_tx_bgk_buff->Payload[1] = 0x01;
-            p_tx_bgk_buff->Payload[2] = 0x02;
-            p_tx_bgk_buff->Payload[3] = 0x03;
-            p_tx_bgk_buff->Payload[4] = 0x04;
-            p_tx_bgk_buff->Payload[5] = 0x05;
-            p_tx_bgk_buff->Payload[6] = 0x06;
-            p_tx_bgk_buff->Payload[7] = 0x07;
-            p_tx_bgk_buff->Payload[8] = 0x08;
-            p_tx_bgk_buff->Payload[9] = 0x09;
-            push_active_one_message_transmit(0,sdt_true);
-            length ++;
-            */
+            case BGPTCL_EasyUpagrde:
+            {
+                Bough_EasyUpgrade_Protocol(p_rx_bgk_buff,&local_addr[0]);
+                break;
+            }
+            default:
+            {
+                break;
+            }
         }
     }
 }

@@ -7,8 +7,61 @@
 #include "..\mde_bough_link_half.h"
 #include "hc32l13x.h"
 #include "intrinsics.h"
-#include "dmac.h"
-
+#include "interrupts_hc32l13x.h"
+//-------------------------------------------------------------------------------------------------
+  /**
+  *******************************************************************************
+  ** \brief DMA传输当前状态
+  **
+  ******************************************************************************/
+  typedef enum en_dma_stat
+  {
+    DmaDefault                                = 0U,    ///< 初始值
+    DmaAddOverflow                                    = 1U,    ///< 传输错误引起中止（地址溢出）
+    DmaHALT                         = 2U,    ///< 传输停止请求引起中止（外设停止请求引起的停止或者EB/DE位引起的禁止传输）
+    DmaAccSCRErr                    = 3U,    ///< 传输错误引起中止（传输源地址访问错误）
+    DmaAccDestErr                   = 4U,    ///< 传输错误引起中止（传输目的地址访问错误）
+    DmaTransferComplete             = 5U,    ///< 成功传输完成
+    DmaTransferPause                = 7U,    ///< 传输暂停      
+  } en_dma_stat_t;
+  /**
+  *******************************************************************************
+  ** \brief DMA 触发源选择
+  **
+  ******************************************************************************/  
+  typedef enum stc_dma_trig_sel
+  {
+    DmaSWTrig                         = 0U,     ///< Select DMA software trig 
+    DmaSPI0RXTrig                     = 32U,    ///< Select DMA hardware trig 0
+    DmaSPI0TXTrig                     = 33U,    ///< Select DMA hardware trig 1
+    DmaSPI1RXTrig                     = 34U,    ///< Select DMA hardware trig 2
+    DmaSPI1TXTrig                     = 35U,    ///< Select DMA hardware trig 3
+    DmaADCJQRTrig                     = 36U,    ///< Select DMA hardware trig 4
+    DmaADCSQRTrig                     = 37U,    ///< Select DMA hardware trig 5
+    DmaLCDTxTrig                      = 38U,    ///< Select DMA hardware trig 6
+    DmaUart0RxTrig                    = 40U,    ///< Select DMA hardware trig 8
+    DmaUart0TxTrig                    = 41U,    ///< Select DMA hardware trig 9             
+    DmaUart1RxTrig                    = 42U,    ///< Select DMA hardware trig 10
+    DmaUart1TxTrig                    = 43U,    ///< Select DMA hardware trig 11
+    DmaLpUart0RxTrig                  = 44U,    ///< Select DMA hardware trig 12
+    DmaLpUart0TxTrig                  = 45U,    ///< Select DMA hardware trig 13
+    DmaLpUart1RxTrig                  = 46U,    ///< Select DMA hardware trig 14
+    DmaLpUart1TxTrig                  = 47U,    ///< Select DMA hardware trig 15
+    DmaTIM0ATrig                      = 50U,    ///< Select DMA hardware trig 18
+    DmaTIM0BTrig                      = 51U,    ///< Select DMA hardware trig 19
+    DmaTIM1ATrig                      = 52U,    ///< Select DMA hardware trig 20
+    DmaTIM1BTrig                      = 53U,    ///< Select DMA hardware trig 21
+    DmaTIM2ATrig                      = 54U,    ///< Select DMA hardware trig 22   
+    DmaTIM2BTrig                      = 55U,    ///< Select DMA hardware trig 23   
+    DmaTIM3ATrig                      = 56U,    ///< Select DMA hardware trig 24    
+    DmaTIM3BTrig                      = 57U,    ///< Select DMA hardware trig 25   
+    DmaTIM4ATrig                      = 58U,    ///< Select DMA hardware trig 26    
+    DmaTIM4BTrig                      = 59U,    ///< Select DMA hardware trig 27   
+    DmaTIM5ATrig                      = 60U,    ///< Select DMA hardware trig 28    
+    DmaTIM5BTrig                      = 61U,    ///< Select DMA hardware trig 29   
+    DmaTIM6ATrig                      = 62U,    ///< Select DMA hardware trig 30    
+    DmaTIM6BTrig                      = 63U,    ///< Select DMA hardware trig 31   
+  }en_dma_trig_sel_t;  
 //-------------------------------------------------------------------------------------------------
 //uart0 DMA 传输
 //+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++

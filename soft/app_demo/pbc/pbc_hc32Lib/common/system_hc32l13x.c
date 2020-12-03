@@ -55,7 +55,7 @@
 #include "base_types.h"
 #include "hc32l13x.h"
 #include "system_hc32l13x.h"
-#include "sysctrl.h"
+//#include "sysctrl.h"
 
 /**
  ******************************************************************************
@@ -67,7 +67,7 @@ uint32_t SystemCoreClock = 4000000;
 //add clock source.
 void SystemCoreClockUpdate (void) // Update SystemCoreClock variable
 {
-    SystemCoreClock = Sysctrl_GetHClkFreq();
+    //SystemCoreClock = Sysctrl_GetHClkFreq();
 }
 
 /**
