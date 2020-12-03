@@ -6,119 +6,113 @@
   <configuration>
     <name>Debug</name>
     <outputs>
-      <file>$TOOLKIT_DIR$\inc\c\intrinsics.h</file>
-      <file>$TOOLKIT_DIR$\inc\c\stddef.h</file>
-      <file>$PROJ_DIR$\..\pbc\lib_hc32L136\base_types.h</file>
+      <file>$PROJ_DIR$\..\app\app_cfg.h</file>
+      <file>$PROJ_DIR$\..\mde\mde_deviceCfg\depend\bsp_cfg_hc32l136k8ta.h</file>
+      <file>$PROJ_DIR$\..\mde\mde_deviceCfg\depend\bsp_deviceCfg.c</file>
+      <file>$PROJ_DIR$\..\app\main.c</file>
+      <file>$PROJ_DIR$\..\mde\mde_deviceCfg\mde_deviceCfg.c</file>
+      <file>$PROJ_DIR$\..\mde\mde_deviceCfg\mde_deviceCfg.h</file>
+      <file>$PROJ_DIR$\..\mde\mde_deviceCfg\depend\bsp_deviceCfg.h</file>
+      <file>$PROJ_DIR$\..\pbc\pbc_dataConvert\pbc_dataConvert.c</file>
+      <file>$PROJ_DIR$\..\pbc\lib_hc32L136\system_hc32l13x.h</file>
+      <file>$PROJ_DIR$\..\mde\mde_storage\mde_storage.c</file>
+      <file>$PROJ_DIR$\..\pbc\pbc_dataConvert\pbc_dataConvert.h</file>
+      <file>$TOOLKIT_DIR$\inc\c\DLib_Defaults.h</file>
+      <file>$PROJ_DIR$\..\mde\mde_storage\depend\bsp_sto_hc32l136k8ta.h</file>
+      <file>$TOOLKIT_DIR$\inc\c\DLib_Product_string.h</file>
+      <file>$PROJ_DIR$\..\pbc\lib_hc32L136\hc32l13x.h</file>
+      <file>$PROJ_DIR$\Debug\Obj\bsp_deviceCfg.pbi</file>
+      <file>$PROJ_DIR$\Debug\Obj\bsp_storage.__cstat.et</file>
+      <file>$PROJ_DIR$\Debug\Obj\main.o</file>
       <file>$PROJ_DIR$\Debug\Obj\system_hc32l13x.pbi</file>
       <file>$PROJ_DIR$\Debug\Obj\startup_hc32l13x.o</file>
-      <file>$PROJ_DIR$\Debug\Obj\bsp_storage.o</file>
-      <file>$PROJ_DIR$\..\pbc\lib_hc32L136\hc32l13x.h</file>
-      <file>$PROJ_DIR$\Debug\Obj\mde_deviceCfg.o</file>
-      <file>$TOOLKIT_DIR$\inc\c\DLib_Product_string.h</file>
-      <file>$PROJ_DIR$\chip_select.h</file>
-      <file>$PROJ_DIR$\Debug\Obj\bsp_storage.__cstat.et</file>
-      <file>$PROJ_DIR$\Debug\Obj\system_hc32l13x.__cstat.et</file>
-      <file>$TOOLKIT_DIR$\inc\c\ysizet.h</file>
-      <file>$PROJ_DIR$\Debug\Obj\system_hc32l13x.o</file>
+      <file>$PROJ_DIR$\..\mde\mde_storage\depend\bsp_storage.h</file>
       <file>$TOOLKIT_DIR$\inc\c\DLib_Product.h</file>
-      <file>$TOOLKIT_DIR$\inc\c\ystdio.h</file>
-      <file>$PROJ_DIR$\Debug\Obj\pbc_dataConvert.__cstat.et</file>
-      <file>$PROJ_DIR$\Debug\Obj\mde_deviceCfg.pbi</file>
-      <file>$PROJ_DIR$\Debug\Obj\bsp_deviceCfg.pbi</file>
-      <file>$PROJ_DIR$\Debug\Obj\main.o</file>
-      <file>$PROJ_DIR$\Debug\Obj\main.__cstat.et</file>
-      <file>$PROJ_DIR$\Debug\Obj\bsp_deviceCfg.__cstat.et</file>
-      <file>$PROJ_DIR$\..\mde\mde_storage\depend\snail_data_types.h</file>
-      <file>$PROJ_DIR$\Debug\Obj\main.pbi</file>
-      <file>$TOOLKIT_DIR$\CMSIS\Include\core_cmFunc.h</file>
+      <file>$PROJ_DIR$\..\pbc\lib_hc32L136\system_hc32l13x.c</file>
       <file>$PROJ_DIR$\..\app\snail_data_types.h</file>
-      <file>$PROJ_DIR$\..\pbc\lib_hc32L136\system_hc32l13x.h</file>
-      <file>$TOOLKIT_DIR$\lib\m6M_tl.a</file>
       <file>$PROJ_DIR$\Debug\Obj\mde_storage.__cstat.et</file>
-      <file>$TOOLKIT_DIR$\inc\c\DLib_Defaults.h</file>
-      <file>$TOOLKIT_DIR$\inc\c\xencoding_limits.h</file>
+      <file>$PROJ_DIR$\Debug\Obj\pbc_dataConvert.__cstat.et</file>
+      <file>$TOOLKIT_DIR$\lib\m6M_tl.a</file>
+      <file>$PROJ_DIR$\..\mde\mde_storage\depend\bsp_storage.c</file>
+      <file>$PROJ_DIR$\Debug\Obj\system_hc32l13x.__cstat.et</file>
+      <file>$PROJ_DIR$\..\mde\mde_storage\mde_storage.h</file>
       <file>$TOOLKIT_DIR$\lib\rt6M_tl.a</file>
-      <file>$TOOLKIT_DIR$\inc\c\ycheck.h</file>
+      <file>$TOOLKIT_DIR$\inc\c\ysizet.h</file>
+      <file>$TOOLKIT_DIR$\inc\c\ystdio.h</file>
+      <file>$PROJ_DIR$\Debug\Obj\system_hc32l13x.o</file>
+      <file>$PROJ_DIR$\Debug\Obj\bsp_storage.o</file>
+      <file>$TOOLKIT_DIR$\inc\c\xencoding_limits.h</file>
+      <file>$PROJ_DIR$\Debug\Obj\mde_deviceCfg.o</file>
+      <file>$PROJ_DIR$\Debug\Obj\mde_deviceCfg.pbi</file>
+      <file>$PROJ_DIR$\startup_hc32l13x.s</file>
+      <file>$PROJ_DIR$\Debug\Obj\bsp_storage.pbi</file>
+      <file>$TOOLKIT_DIR$\CMSIS\Include\core_cmFunc.h</file>
+      <file>$TOOLKIT_DIR$\CMSIS\Include\core_cmInstr.h</file>
       <file>$PROJ_DIR$\..\mde\mde_deviceCfg\depend\snail_data_types.h</file>
-      <file>$TOOLKIT_DIR$\inc\c\stdio.h</file>
-      <file>$PROJ_DIR$\..\pbc\pbc_dataConvert\depend\snail_data_types.h</file>
-      <file>$TOOLKIT_DIR$\lib\shb_l.a</file>
-      <file>$PROJ_DIR$\Debug\Obj\pbc_dataConvert.pbi</file>
+      <file>$TOOLKIT_DIR$\inc\c\string.h</file>
+      <file>$PROJ_DIR$\Debug\Obj\main.pbi</file>
+      <file>$PROJ_DIR$\..\pbc\lib_hc32L136\base_types.h</file>
+      <file>$TOOLKIT_DIR$\inc\c\ycheck.h</file>
+      <file>$PROJ_DIR$\Debug\Obj\bsp_deviceCfg.__cstat.et</file>
+      <file>$PROJ_DIR$\Debug\Obj\bsp_deviceCfg.o</file>
+      <file>$TOOLKIT_DIR$\inc\c\assert.h</file>
+      <file>$TOOLKIT_DIR$\lib\dl6M_tln.a</file>
+      <file>$TOOLKIT_DIR$\config\linker\HDSC\HC32L136.icf</file>
       <file>$PROJ_DIR$\Debug\Obj\pbc_dataConvert.o</file>
       <file>$TOOLKIT_DIR$\inc\c\DLib_Config_Normal.h</file>
-      <file>$PROJ_DIR$\Debug\Exe\boot_hc32l136k8ta.out</file>
-      <file>$TOOLKIT_DIR$\inc\c\stdint.h</file>
-      <file>$PROJ_DIR$\Debug\Obj\mde_storage.o</file>
-      <file>$PROJ_DIR$\Debug\Obj\bsp_storage.pbi</file>
-      <file>$TOOLKIT_DIR$\inc\c\assert.h</file>
-      <file>$TOOLKIT_DIR$\inc\c\cmsis_iar.h</file>
-      <file>$PROJ_DIR$\..\app\app_cfg.h</file>
-      <file>$PROJ_DIR$\Debug\Obj\bsp_deviceCfg.o</file>
-      <file>$PROJ_DIR$\Debug\Obj\mde_storage.pbi</file>
-      <file>$PROJ_DIR$\Debug\List\boot_hc32l136k8ta.map</file>
-      <file>$TOOLKIT_DIR$\config\linker\HDSC\HC32L136.icf</file>
-      <file>$PROJ_DIR$\..\mde\mde_storage\depend\bsp_sto_hc32l136k8ta.h</file>
-      <file>$PROJ_DIR$\..\mde\mde_storage\depend\bsp_storage.h</file>
-      <file>$PROJ_DIR$\..\mde\mde_storage\mde_storage.c</file>
-      <file>$PROJ_DIR$\..\mde\mde_storage\mde_storage.h</file>
-      <file>$PROJ_DIR$\Debug\Obj\mde_deviceCfg.__cstat.et</file>
-      <file>$PROJ_DIR$\..\app\main.c</file>
-      <file>$PROJ_DIR$\..\mde\mde_deviceCfg\depend\bsp_deviceCfg.c</file>
-      <file>$PROJ_DIR$\..\pbc\lib_hc32L136\system_hc32l13x.c</file>
-      <file>$PROJ_DIR$\..\mde\mde_deviceCfg\depend\bsp_deviceCfg.h</file>
-      <file>$PROJ_DIR$\..\mde\mde_deviceCfg\depend\bsp_cfg_hc32l136k8ta.h</file>
-      <file>$PROJ_DIR$\..\pbc\pbc_dataConvert\pbc_dataConvert.c</file>
-      <file>$PROJ_DIR$\..\mde\mde_deviceCfg\mde_deviceCfg.h</file>
-      <file>$PROJ_DIR$\startup_hc32l13x.s</file>
-      <file>$PROJ_DIR$\..\pbc\pbc_dataConvert\pbc_dataConvert.h</file>
-      <file>$PROJ_DIR$\..\mde\mde_storage\depend\bsp_storage.c</file>
-      <file>$PROJ_DIR$\..\mde\mde_deviceCfg\mde_deviceCfg.c</file>
-      <file>$TOOLKIT_DIR$\inc\c\yvals.h</file>
-      <file>$TOOLKIT_DIR$\CMSIS\Include\core_cmInstr.h</file>
-      <file>$TOOLKIT_DIR$\inc\c\string.h</file>
       <file>$TOOLKIT_DIR$\CMSIS\Include\core_cm0plus.h</file>
-      <file>$TOOLKIT_DIR$\lib\dl6M_tln.a</file>
+      <file>$PROJ_DIR$\Debug\Obj\main.__cstat.et</file>
+      <file>$PROJ_DIR$\..\pbc\pbc_dataConvert\depend\snail_data_types.h</file>
+      <file>$PROJ_DIR$\..\mde\mde_storage\depend\snail_data_types.h</file>
+      <file>$TOOLKIT_DIR$\inc\c\intrinsics.h</file>
+      <file>$PROJ_DIR$\Debug\Exe\boot_hc32l136k8ta.out</file>
+      <file>$TOOLKIT_DIR$\inc\c\stddef.h</file>
+      <file>$TOOLKIT_DIR$\inc\c\cmsis_iar.h</file>
+      <file>$PROJ_DIR$\Debug\Obj\pbc_dataConvert.pbi</file>
+      <file>$TOOLKIT_DIR$\inc\c\stdint.h</file>
+      <file>$PROJ_DIR$\chip_select.h</file>
       <file>$TOOLKIT_DIR$\inc\c\DLib_Threads.h</file>
+      <file>$TOOLKIT_DIR$\inc\c\stdio.h</file>
+      <file>$PROJ_DIR$\Debug\Obj\mde_deviceCfg.__cstat.et</file>
+      <file>$TOOLKIT_DIR$\lib\shb_l.a</file>
+      <file>$PROJ_DIR$\Debug\List\boot_hc32l136k8ta.map</file>
+      <file>$TOOLKIT_DIR$\inc\c\yvals.h</file>
+      <file>$PROJ_DIR$\Debug\Obj\mde_storage.o</file>
+      <file>$PROJ_DIR$\Debug\Obj\mde_storage.pbi</file>
     </outputs>
     <file>
-      <name>$PROJ_DIR$\Debug\Exe\boot_hc32l136k8ta.out</name>
+      <name>[ROOT_NODE]</name>
       <outputs>
         <tool>
           <name>ILINK</name>
-          <file> 49</file>
+          <file> 69 59</file>
         </tool>
       </outputs>
-      <inputs>
-        <tool>
-          <name>ILINK</name>
-          <file> 50 47 5 19 7 42 38 4 13 36 31 27 71</file>
-        </tool>
-      </inputs>
     </file>
     <file>
-      <name>$PROJ_DIR$\..\mde\mde_storage\mde_storage.c</name>
+      <name>$PROJ_DIR$\..\mde\mde_deviceCfg\depend\bsp_deviceCfg.c</name>
       <outputs>
         <tool>
-          <name>ICCARM</name>
-          <file> 42</file>
+          <name>BICOMP</name>
+          <file> 15</file>
         </tool>
         <tool>
-          <name>BICOMP</name>
+          <name>ICCARM</name>
           <file> 48</file>
         </tool>
         <tool>
           <name>__cstat</name>
-          <file> 28</file>
+          <file> 47</file>
         </tool>
       </outputs>
       <inputs>
         <tool>
-          <name>ICCARM</name>
-          <file> 64 35 54 52</file>
+          <name>BICOMP</name>
+          <file> 46 21 54 61 42 1 14 63 40 70 53 64 41 11 35 65 58</file>
         </tool>
         <tool>
-          <name>BICOMP</name>
-          <file> 64 54 35 52</file>
+          <name>ICCARM</name>
+          <file> 64 42 1 14 54 63 46 70 11 53 21 35 65 41 61 58 40</file>
         </tool>
       </inputs>
     </file>
@@ -126,155 +120,11 @@
       <name>$PROJ_DIR$\..\app\main.c</name>
       <outputs>
         <tool>
-          <name>ICCARM</name>
-          <file> 19</file>
-        </tool>
-        <tool>
           <name>BICOMP</name>
-          <file> 23</file>
+          <file> 44</file>
         </tool>
-        <tool>
-          <name>__cstat</name>
-          <file> 20</file>
-        </tool>
-      </outputs>
-      <inputs>
         <tool>
           <name>ICCARM</name>
-          <file> 46 25 62 54 64</file>
-        </tool>
-        <tool>
-          <name>BICOMP</name>
-          <file> 46 25 62 54 64</file>
-        </tool>
-      </inputs>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\..\mde\mde_deviceCfg\depend\bsp_deviceCfg.c</name>
-      <outputs>
-        <tool>
-          <name>ICCARM</name>
-          <file> 47</file>
-        </tool>
-        <tool>
-          <name>BICOMP</name>
-          <file> 18</file>
-        </tool>
-        <tool>
-          <name>__cstat</name>
-          <file> 21</file>
-        </tool>
-      </outputs>
-      <inputs>
-        <tool>
-          <name>ICCARM</name>
-          <file> 9 33 60 6 70 41 32 67 29 39 14 30 72 68 45 0 24</file>
-        </tool>
-        <tool>
-          <name>BICOMP</name>
-          <file> 32 14 70 45 33 60 6 41 24 67 39 9 68 29 30 72 0</file>
-        </tool>
-      </inputs>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\..\pbc\lib_hc32L136\system_hc32l13x.c</name>
-      <outputs>
-        <tool>
-          <name>ICCARM</name>
-          <file> 13</file>
-        </tool>
-        <tool>
-          <name>BICOMP</name>
-          <file> 3</file>
-        </tool>
-        <tool>
-          <name>__cstat</name>
-          <file> 11</file>
-        </tool>
-      </outputs>
-      <inputs>
-        <tool>
-          <name>ICCARM</name>
-          <file> 2 34 32 67 29 39 14 30 72 12 15 69 8 1 41 44 6 70 68 45 0 24 26</file>
-        </tool>
-        <tool>
-          <name>BICOMP</name>
-          <file> 67 30 72 41 69 32 15 29 24 45 6 34 1 44 12 39 14 8 70 2 26 68 0</file>
-        </tool>
-      </inputs>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\..\pbc\pbc_dataConvert\pbc_dataConvert.c</name>
-      <outputs>
-        <tool>
-          <name>ICCARM</name>
-          <file> 38</file>
-        </tool>
-        <tool>
-          <name>BICOMP</name>
-          <file> 37</file>
-        </tool>
-        <tool>
-          <name>__cstat</name>
-          <file> 16</file>
-        </tool>
-      </outputs>
-      <inputs>
-        <tool>
-          <name>ICCARM</name>
-          <file> 35</file>
-        </tool>
-        <tool>
-          <name>BICOMP</name>
-          <file> 35</file>
-        </tool>
-      </inputs>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\startup_hc32l13x.s</name>
-      <outputs>
-        <tool>
-          <name>AARM</name>
-          <file> 4</file>
-        </tool>
-      </outputs>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\..\mde\mde_storage\depend\bsp_storage.c</name>
-      <outputs>
-        <tool>
-          <name>ICCARM</name>
-          <file> 5</file>
-        </tool>
-        <tool>
-          <name>BICOMP</name>
-          <file> 43</file>
-        </tool>
-        <tool>
-          <name>__cstat</name>
-          <file> 10</file>
-        </tool>
-      </outputs>
-      <inputs>
-        <tool>
-          <name>ICCARM</name>
-          <file> 9 22 51 6 70 41 32 67 29 39 14 30 72 68 45 0 24</file>
-        </tool>
-        <tool>
-          <name>BICOMP</name>
-          <file> 70 32 14 45 22 51 6 41 24 67 39 9 68 29 30 72 0</file>
-        </tool>
-      </inputs>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\..\mde\mde_deviceCfg\mde_deviceCfg.c</name>
-      <outputs>
-        <tool>
-          <name>ICCARM</name>
-          <file> 7</file>
-        </tool>
-        <tool>
-          <name>BICOMP</name>
           <file> 17</file>
         </tool>
         <tool>
@@ -284,95 +134,260 @@
       </outputs>
       <inputs>
         <tool>
-          <name>ICCARM</name>
-          <file> 59 33</file>
+          <name>BICOMP</name>
+          <file> 0 23 5 29 10</file>
         </tool>
         <tool>
-          <name>BICOMP</name>
-          <file> 59 33</file>
+          <name>ICCARM</name>
+          <file> 0 23 5 29 10</file>
         </tool>
       </inputs>
     </file>
     <file>
-      <name>[ROOT_NODE]</name>
+      <name>$PROJ_DIR$\..\mde\mde_deviceCfg\mde_deviceCfg.c</name>
       <outputs>
         <tool>
-          <name>ILINK</name>
-          <file> 49 40</file>
+          <name>BICOMP</name>
+          <file> 37</file>
+        </tool>
+        <tool>
+          <name>ICCARM</name>
+          <file> 36</file>
+        </tool>
+        <tool>
+          <name>__cstat</name>
+          <file> 67</file>
         </tool>
       </outputs>
+      <inputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 6 42</file>
+        </tool>
+        <tool>
+          <name>ICCARM</name>
+          <file> 6 42</file>
+        </tool>
+      </inputs>
     </file>
-  </configuration>
-  <configuration>
-    <name>Release</name>
-    <outputs>
-      <file>$PROJ_DIR$\Release\Obj\system_hc32l13x.o</file>
-      <file>$PROJ_DIR$\Release\Obj\bsp_storage.o</file>
-      <file>$PROJ_DIR$\Release\Obj\pbc_dataConvert.o</file>
-      <file>$PROJ_DIR$\Release\Obj\bsp_deviceCfg.pbi</file>
-      <file>$PROJ_DIR$\Release\Exe\boot_hc32l136k8ta.out</file>
-      <file>$PROJ_DIR$\Release\Obj\mde_deviceCfg.pbi</file>
-      <file>$PROJ_DIR$\Release\Exe\boot_hc32l136k8ta.bin</file>
-      <file>$PROJ_DIR$\Release\Obj\startup_hc32l13x.o</file>
-      <file>$PROJ_DIR$\Release\Obj\bsp_deviceCfg.o</file>
-      <file>$PROJ_DIR$\Release\Obj\main.o</file>
-      <file>$PROJ_DIR$\Release\Obj\pbc_dataConvert.pbi</file>
-      <file>$PROJ_DIR$\Release\Obj\main.pbi</file>
-      <file>$PROJ_DIR$\Release\Obj\system_hc32l13x.pbi</file>
-      <file>$PROJ_DIR$\Release\Obj\boot_hc32l136k8ta.pbd</file>
-      <file>$PROJ_DIR$\..\app\app_cfg.h</file>
-      <file>$PROJ_DIR$\..\mde\mde_storage\depend\bsp_sto_hc32l136k8ta.h</file>
-      <file>$PROJ_DIR$\..\mde\mde_storage\depend\bsp_storage.h</file>
-      <file>$PROJ_DIR$\..\mde\mde_storage\mde_storage.c</file>
-      <file>$PROJ_DIR$\..\mde\mde_storage\mde_storage.h</file>
-      <file>$PROJ_DIR$\..\app\main.c</file>
-      <file>$PROJ_DIR$\..\mde\mde_deviceCfg\depend\bsp_deviceCfg.c</file>
-      <file>$PROJ_DIR$\..\pbc\lib_hc32L136\system_hc32l13x.c</file>
-      <file>$PROJ_DIR$\..\mde\mde_deviceCfg\depend\bsp_deviceCfg.h</file>
-      <file>$PROJ_DIR$\..\mde\mde_deviceCfg\depend\bsp_cfg_hc32l136k8ta.h</file>
-      <file>$PROJ_DIR$\..\pbc\pbc_dataConvert\pbc_dataConvert.c</file>
-      <file>$PROJ_DIR$\..\mde\mde_deviceCfg\mde_deviceCfg.h</file>
-      <file>$PROJ_DIR$\startup_hc32l13x.s</file>
-      <file>$PROJ_DIR$\..\pbc\pbc_dataConvert\pbc_dataConvert.h</file>
-      <file>$PROJ_DIR$\..\mde\mde_storage\depend\bsp_storage.c</file>
-      <file>$PROJ_DIR$\..\mde\mde_deviceCfg\mde_deviceCfg.c</file>
-      <file>$PROJ_DIR$\Release\Obj\bsp_storage.pbi</file>
-      <file>$PROJ_DIR$\Release\Obj\mde_deviceCfg.o</file>
-      <file>$PROJ_DIR$\Release\Obj\mde_storage.pbi</file>
-      <file>$PROJ_DIR$\Release\Obj\mde_storage.o</file>
-    </outputs>
     <file>
-      <name>$PROJ_DIR$\Release\Exe\boot_hc32l136k8ta.out</name>
+      <name>$PROJ_DIR$\..\pbc\pbc_dataConvert\pbc_dataConvert.c</name>
       <outputs>
         <tool>
-          <name>OBJCOPY</name>
-          <file> 6</file>
+          <name>BICOMP</name>
+          <file> 62</file>
+        </tool>
+        <tool>
+          <name>ICCARM</name>
+          <file> 52</file>
+        </tool>
+        <tool>
+          <name>__cstat</name>
+          <file> 25</file>
         </tool>
       </outputs>
+      <inputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 56</file>
+        </tool>
+        <tool>
+          <name>ICCARM</name>
+          <file> 56</file>
+        </tool>
+      </inputs>
     </file>
     <file>
       <name>$PROJ_DIR$\..\mde\mde_storage\mde_storage.c</name>
       <outputs>
         <tool>
+          <name>BICOMP</name>
+          <file> 72</file>
+        </tool>
+        <tool>
+          <name>ICCARM</name>
+          <file> 71</file>
+        </tool>
+        <tool>
+          <name>__cstat</name>
+          <file> 24</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 10 29 56 20</file>
+        </tool>
+        <tool>
+          <name>ICCARM</name>
+          <file> 10 56 29 20</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\pbc\lib_hc32L136\system_hc32l13x.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 18</file>
+        </tool>
+        <tool>
           <name>ICCARM</name>
           <file> 33</file>
         </tool>
         <tool>
+          <name>__cstat</name>
+          <file> 28</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
           <name>BICOMP</name>
-          <file> 32</file>
+          <file> 70 35 65 63 43 46 32 11 40 61 14 66 60 49 31 53 21 13 54 45 8 41 58</file>
+        </tool>
+        <tool>
+          <name>ICCARM</name>
+          <file> 45 66 46 70 11 53 21 35 65 31 32 43 13 60 63 49 14 54 41 61 58 40 8</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\mde\mde_storage\depend\bsp_storage.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 39</file>
+        </tool>
+        <tool>
+          <name>ICCARM</name>
+          <file> 34</file>
+        </tool>
+        <tool>
+          <name>__cstat</name>
+          <file> 16</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 54 46 21 61 57 12 14 63 40 70 53 64 41 11 35 65 58</file>
+        </tool>
+        <tool>
+          <name>ICCARM</name>
+          <file> 64 57 12 14 54 63 46 70 11 53 21 35 65 41 61 58 40</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\startup_hc32l13x.s</name>
+      <outputs>
+        <tool>
+          <name>AARM</name>
+          <file> 19</file>
         </tool>
       </outputs>
     </file>
     <file>
-      <name>$PROJ_DIR$\..\app\main.c</name>
+      <name>$PROJ_DIR$\Debug\Exe\boot_hc32l136k8ta.out</name>
       <outputs>
         <tool>
-          <name>ICCARM</name>
-          <file> 9</file>
+          <name>ILINK</name>
+          <file> 69</file>
         </tool>
+      </outputs>
+      <inputs>
         <tool>
-          <name>BICOMP</name>
-          <file> 11</file>
+          <name>ILINK</name>
+          <file> 51 48 34 17 36 71 52 19 33 68 30 26 50</file>
+        </tool>
+      </inputs>
+    </file>
+  </configuration>
+  <configuration>
+    <name>Release</name>
+    <outputs>
+      <file>$PROJ_DIR$\Release\Obj\main.__cstat.et</file>
+      <file>$PROJ_DIR$\Release\Obj\bsp_deviceCfg.__cstat.et</file>
+      <file>$PROJ_DIR$\Release\Obj\system_hc32l13x.__cstat.et</file>
+      <file>$PROJ_DIR$\Release\Obj\mde_deviceCfg.__cstat.et</file>
+      <file>$PROJ_DIR$\Release\Obj\mde_storage.__cstat.et</file>
+      <file>$PROJ_DIR$\Release\Obj\pbc_dataConvert.__cstat.et</file>
+      <file>$PROJ_DIR$\Release\Obj\bsp_storage.__cstat.et</file>
+      <file>$PROJ_DIR$\boot_hc32l13x.icf</file>
+      <file>$PROJ_DIR$\Release\List\boot_hc32l136k8ta.map</file>
+      <file>$PROJ_DIR$\..\app\app_cfg.h</file>
+      <file>$PROJ_DIR$\..\mde\mde_deviceCfg\depend\bsp_cfg_hc32l136k8ta.h</file>
+      <file>$PROJ_DIR$\..\mde\mde_deviceCfg\depend\bsp_deviceCfg.c</file>
+      <file>$PROJ_DIR$\..\app\main.c</file>
+      <file>$PROJ_DIR$\..\mde\mde_deviceCfg\mde_deviceCfg.c</file>
+      <file>$PROJ_DIR$\..\mde\mde_deviceCfg\mde_deviceCfg.h</file>
+      <file>$PROJ_DIR$\..\mde\mde_deviceCfg\depend\bsp_deviceCfg.h</file>
+      <file>$PROJ_DIR$\..\pbc\pbc_dataConvert\pbc_dataConvert.c</file>
+      <file>$PROJ_DIR$\..\pbc\lib_hc32L136\system_hc32l13x.h</file>
+      <file>$PROJ_DIR$\..\mde\mde_storage\mde_storage.c</file>
+      <file>$PROJ_DIR$\..\pbc\pbc_dataConvert\pbc_dataConvert.h</file>
+      <file>$TOOLKIT_DIR$\inc\c\DLib_Defaults.h</file>
+      <file>$PROJ_DIR$\..\mde\mde_storage\depend\bsp_sto_hc32l136k8ta.h</file>
+      <file>$TOOLKIT_DIR$\inc\c\DLib_Product_string.h</file>
+      <file>$PROJ_DIR$\..\pbc\lib_hc32L136\hc32l13x.h</file>
+      <file>$PROJ_DIR$\..\mde\mde_storage\depend\bsp_storage.h</file>
+      <file>$TOOLKIT_DIR$\inc\c\DLib_Product.h</file>
+      <file>$PROJ_DIR$\..\pbc\lib_hc32L136\system_hc32l13x.c</file>
+      <file>$PROJ_DIR$\..\app\snail_data_types.h</file>
+      <file>$TOOLKIT_DIR$\lib\m6M_tl.a</file>
+      <file>$PROJ_DIR$\..\mde\mde_storage\depend\bsp_storage.c</file>
+      <file>$PROJ_DIR$\..\mde\mde_storage\mde_storage.h</file>
+      <file>$TOOLKIT_DIR$\lib\rt6M_tl.a</file>
+      <file>$TOOLKIT_DIR$\inc\c\ysizet.h</file>
+      <file>$TOOLKIT_DIR$\inc\c\ystdio.h</file>
+      <file>$TOOLKIT_DIR$\inc\c\xencoding_limits.h</file>
+      <file>$PROJ_DIR$\startup_hc32l13x.s</file>
+      <file>$TOOLKIT_DIR$\CMSIS\Include\core_cmFunc.h</file>
+      <file>$TOOLKIT_DIR$\CMSIS\Include\core_cmInstr.h</file>
+      <file>$PROJ_DIR$\..\mde\mde_deviceCfg\depend\snail_data_types.h</file>
+      <file>$TOOLKIT_DIR$\inc\c\string.h</file>
+      <file>$PROJ_DIR$\..\pbc\lib_hc32L136\base_types.h</file>
+      <file>$TOOLKIT_DIR$\inc\c\ycheck.h</file>
+      <file>$TOOLKIT_DIR$\inc\c\assert.h</file>
+      <file>$TOOLKIT_DIR$\lib\dl6M_tln.a</file>
+      <file>$TOOLKIT_DIR$\inc\c\DLib_Config_Normal.h</file>
+      <file>$TOOLKIT_DIR$\CMSIS\Include\core_cm0plus.h</file>
+      <file>$PROJ_DIR$\..\pbc\pbc_dataConvert\depend\snail_data_types.h</file>
+      <file>$PROJ_DIR$\..\mde\mde_storage\depend\snail_data_types.h</file>
+      <file>$TOOLKIT_DIR$\inc\c\intrinsics.h</file>
+      <file>$TOOLKIT_DIR$\inc\c\stddef.h</file>
+      <file>$TOOLKIT_DIR$\inc\c\cmsis_iar.h</file>
+      <file>$TOOLKIT_DIR$\inc\c\stdint.h</file>
+      <file>$PROJ_DIR$\chip_select.h</file>
+      <file>$TOOLKIT_DIR$\inc\c\DLib_Threads.h</file>
+      <file>$TOOLKIT_DIR$\inc\c\stdio.h</file>
+      <file>$TOOLKIT_DIR$\lib\shb_l.a</file>
+      <file>$TOOLKIT_DIR$\inc\c\yvals.h</file>
+      <file>$PROJ_DIR$\Release\Obj\mde_storage.o</file>
+      <file>$PROJ_DIR$\Release\Obj\mde_deviceCfg.pbi</file>
+      <file>$PROJ_DIR$\Release\Obj\pbc_dataConvert.pbi</file>
+      <file>$PROJ_DIR$\Release\Obj\mde_storage.pbi</file>
+      <file>$PROJ_DIR$\Release\Obj\pbc_dataConvert.o</file>
+      <file>$PROJ_DIR$\Release\Exe\boot_hc32l136k8ta.bin</file>
+      <file>$PROJ_DIR$\Release\Exe\boot_hc32l136k8ta.out</file>
+      <file>$PROJ_DIR$\Release\Obj\bsp_deviceCfg.o</file>
+      <file>$PROJ_DIR$\Release\Obj\bsp_storage.pbi</file>
+      <file>$PROJ_DIR$\Release\Obj\system_hc32l13x.o</file>
+      <file>$PROJ_DIR$\Release\Obj\bsp_deviceCfg.pbi</file>
+      <file>$PROJ_DIR$\Release\Obj\startup_hc32l13x.o</file>
+      <file>$PROJ_DIR$\Release\Obj\main.pbi</file>
+      <file>$PROJ_DIR$\Release\Obj\boot_hc32l136k8ta.pbd</file>
+      <file>$PROJ_DIR$\Release\Obj\system_hc32l13x.pbi</file>
+      <file>$PROJ_DIR$\Release\Obj\mde_deviceCfg.o</file>
+      <file>$PROJ_DIR$\Release\Obj\main.o</file>
+      <file>$PROJ_DIR$\Release\Obj\bsp_storage.o</file>
+    </outputs>
+    <file>
+      <name>[ROOT_NODE]</name>
+      <outputs>
+        <tool>
+          <name>ILINK</name>
+          <file> 63 8</file>
         </tool>
       </outputs>
     </file>
@@ -380,84 +395,218 @@
       <name>$PROJ_DIR$\..\mde\mde_deviceCfg\depend\bsp_deviceCfg.c</name>
       <outputs>
         <tool>
-          <name>ICCARM</name>
-          <file> 8</file>
+          <name>BICOMP</name>
+          <file> 67</file>
         </tool>
         <tool>
+          <name>ICCARM</name>
+          <file> 64</file>
+        </tool>
+        <tool>
+          <name>__cstat</name>
+          <file> 1</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
           <name>BICOMP</name>
+          <file> 45 41 25 50 38 10 23 51 36 56 44 52 37 20 34 53 48</file>
+        </tool>
+        <tool>
+          <name>ICCARM</name>
+          <file> 52 38 10 23 45 51 41 56 20 44 25 34 53 37 50 48 36</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\app\main.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 69</file>
+        </tool>
+        <tool>
+          <name>ICCARM</name>
+          <file> 73</file>
+        </tool>
+        <tool>
+          <name>__cstat</name>
+          <file> 0</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 9 27 14 30 19</file>
+        </tool>
+        <tool>
+          <name>ICCARM</name>
+          <file> 9 27 14 30 19</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\mde\mde_deviceCfg\mde_deviceCfg.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 58</file>
+        </tool>
+        <tool>
+          <name>ICCARM</name>
+          <file> 72</file>
+        </tool>
+        <tool>
+          <name>__cstat</name>
           <file> 3</file>
         </tool>
       </outputs>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\..\pbc\lib_hc32L136\system_hc32l13x.c</name>
-      <outputs>
-        <tool>
-          <name>ICCARM</name>
-          <file> 0</file>
-        </tool>
+      <inputs>
         <tool>
           <name>BICOMP</name>
-          <file> 12</file>
+          <file> 15 38</file>
         </tool>
-      </outputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 15 38</file>
+        </tool>
+      </inputs>
     </file>
     <file>
       <name>$PROJ_DIR$\..\pbc\pbc_dataConvert\pbc_dataConvert.c</name>
       <outputs>
         <tool>
-          <name>ICCARM</name>
-          <file> 2</file>
+          <name>BICOMP</name>
+          <file> 59</file>
         </tool>
         <tool>
-          <name>BICOMP</name>
-          <file> 10</file>
+          <name>ICCARM</name>
+          <file> 61</file>
+        </tool>
+        <tool>
+          <name>__cstat</name>
+          <file> 5</file>
         </tool>
       </outputs>
+      <inputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 46</file>
+        </tool>
+        <tool>
+          <name>ICCARM</name>
+          <file> 46</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\mde\mde_storage\mde_storage.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 60</file>
+        </tool>
+        <tool>
+          <name>ICCARM</name>
+          <file> 57</file>
+        </tool>
+        <tool>
+          <name>__cstat</name>
+          <file> 4</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 19 30 46 24</file>
+        </tool>
+        <tool>
+          <name>ICCARM</name>
+          <file> 19 46 30 24</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\pbc\lib_hc32L136\system_hc32l13x.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 71</file>
+        </tool>
+        <tool>
+          <name>ICCARM</name>
+          <file> 66</file>
+        </tool>
+        <tool>
+          <name>__cstat</name>
+          <file> 2</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 56 34 53 51 39 41 45 33 20 36 50 23 54 49 42 32 44 25 22 40 17 37 48</file>
+        </tool>
+        <tool>
+          <name>ICCARM</name>
+          <file> 40 54 41 56 20 44 25 34 53 32 33 39 22 49 51 42 23 45 37 50 48 36 17</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\mde\mde_storage\depend\bsp_storage.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 65</file>
+        </tool>
+        <tool>
+          <name>ICCARM</name>
+          <file> 74</file>
+        </tool>
+        <tool>
+          <name>__cstat</name>
+          <file> 6</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 41 25 45 50 47 21 23 51 36 56 44 52 37 20 34 53 48</file>
+        </tool>
+        <tool>
+          <name>ICCARM</name>
+          <file> 52 47 21 23 45 51 41 56 20 44 25 34 53 37 50 48 36</file>
+        </tool>
+      </inputs>
     </file>
     <file>
       <name>$PROJ_DIR$\startup_hc32l13x.s</name>
       <outputs>
         <tool>
           <name>AARM</name>
-          <file> 7</file>
+          <file> 68</file>
         </tool>
       </outputs>
     </file>
     <file>
-      <name>$PROJ_DIR$\..\mde\mde_storage\depend\bsp_storage.c</name>
-      <outputs>
-        <tool>
-          <name>ICCARM</name>
-          <file> 1</file>
-        </tool>
-        <tool>
-          <name>BICOMP</name>
-          <file> 30</file>
-        </tool>
-      </outputs>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\..\mde\mde_deviceCfg\mde_deviceCfg.c</name>
-      <outputs>
-        <tool>
-          <name>ICCARM</name>
-          <file> 31</file>
-        </tool>
-        <tool>
-          <name>BICOMP</name>
-          <file> 5</file>
-        </tool>
-      </outputs>
-    </file>
-    <file>
-      <name>[ROOT_NODE]</name>
+      <name>$PROJ_DIR$\Release\Exe\boot_hc32l136k8ta.out</name>
       <outputs>
         <tool>
           <name>ILINK</name>
-          <file> 4</file>
+          <file> 8</file>
+        </tool>
+        <tool>
+          <name>OBJCOPY</name>
+          <file> 62</file>
         </tool>
       </outputs>
+      <inputs>
+        <tool>
+          <name>ILINK</name>
+          <file> 7 64 74 73 72 57 61 68 66 55 31 28 43</file>
+        </tool>
+      </inputs>
     </file>
   </configuration>
 </project>
